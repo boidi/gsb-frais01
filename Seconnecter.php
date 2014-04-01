@@ -1,6 +1,6 @@
 <?php  
 /** 
- * Script de contrÃ´le et d'affichage du cas d'utilisation "Se connecter"
+ * Script de contrôle et d'affichage du cas d'utilisation "Se connecter"
  * @package default
  * @todo  RAS
  */

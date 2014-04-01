@@ -1,6 +1,6 @@
 <?php
 /** 
- * Script de contrÃ´le et d'affichage du cas d'utilisation "Consulter une fiche de frais"
+ * Script de contrôle et d'affichage du cas d'utilisation "Consulter une fiche de frais"
  * @package default
  * @todo  RAS
  */
@@ -45,7 +45,7 @@
           <input type="hidden" name="etape" value="validerConsult" />
       <p>
         <label for="lstMois">Mois : </label>
-        <select id="lstMois" name="lstMois" title="S&eacutelectionnez le mois souhait&eacute pour la fiche de frais">
+        <select id="lstMois" name="lstMois" title="Sélectionnez le mois souhait&eacute pour la fiche de frais">
             <?php
                 // on propose tous les mois pour lesquels le visiteur a une fiche de frais
                 $req = obtenirReqMoisFicheFrais(obtenirIdUserConnecte());
@@ -76,8 +76,8 @@
       </form>
 <?php      
 
-// demande et affichage des diffÃ©rents Ã©lÃ©ments (forfaitisÃ©s et non forfaitisÃ©s)
-// de la fiche de frais demandÃ©e, uniquement si pas d'erreur dÃ©tectÃ© au contrÃ´le
+// demande et affichage des différents éléments (forfaitisés et non forfaitisés)
+// de la fiche de frais demandée, uniquement si pas d'erreur détectée au contrôle
     if ( $etape == "validerConsult" ) {
         if ( nbErreurs($tabErreurs) > 0 ) {
             echo toStringErreurs($tabErreurs) ;
@@ -124,8 +124,8 @@
         </tr>
         <tr>
             <?php
-            // second parcours du tableau des frais forfaitisÃ©s du visiteur connectÃ©
-            // pour afficher la ligne des quantitÃ©s des frais forfaitisÃ©s
+            // second parcours du tableau des frais forfaitisés du visiteur connecté
+            // pour afficher la ligne des quantités des frais forfaitisés
             foreach ( $tabEltsFraisForfait as $unLibelle => $uneQuantite ) {
             ?>
                 <td class="qteForfait"><?php echo $uneQuantite ; ?></td>
@@ -163,6 +163,11 @@
             mysql_free_result($idJeuEltsHorsForfait);
   ?>
     </table>
+    <form id="formGenPDF" method="post" action="include/exportPDF.php">
+        <input type="hidden" name="idVisiteur" value="<?php echo obtenirIdUserConnecte(); ?>" />
+        <input type="hidden" name="idMois" value="<?php echo $moisSaisi; ?>" />
+        <a style="cursor:pointer;" onclick="document.getElementById('formGenPDF').submit();">Exporter au format PDF <img src="images/pdfIcon.png" style="height:16px;float:none;vertical-align:middle;" alt="icone Actualiser" /></a>
+    </form>
   </div>
 <?php
         }

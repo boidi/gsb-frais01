@@ -1,0 +1,129 @@
+
+<<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><!DOCTYPE html>
+<html Lang ="fr" xml: lang="fr" xmlns="http//:www.w3.org/1999/xhtml">
+    <head>
+        <title>Suivi des frais de visite</title>
+        <style type="text/css">
+		<!-- body {background-color: white; color:#5599EE; } 
+			.titre { width : 180px ;  clear:left; float:left; } 
+			.zone { float : left; color:#7091BB } -->
+	</style>
+    </head>
+    <body>
+       <div style="width: 18%; height: 100%; float: left; background-color: white;" name="gauche">
+       <div style="height: 10%; text-align: center;" name="coin"><img width="100" height="60" src="./images/logo.jpg"></div>
+         <div name="menu">
+	<h2>Outils</h2>
+	<ul>
+            <li>Frais</li>
+	  <ul>
+	   <li>
+               <a href="formSaisieFrais.html">Nouveau</a>
+                </li>
+	         <li>
+                  <a href="ConsultFrais.html">Consulter</a>
+                  </li>
+		</ul>
+	     </ul>
+         </div>
+    </div>
+<div style="width: 80%; float: left;" name="droite">
+	<div style="margin: 2px; height: 10%; float: left;" name="haut">
+            <h1>Suivi de remboursement des Frais</h1>
+        </div>	
+	<div style="margin: 10px 2px 2px; height: 88%; color: white; clear: left; background-color: rgb(119, 170, 221);" 
+        name="bas">
+	<form name="formConsultFrais" action="chercheFrais.php" method="post">
+		<h1> P&eacuteriode </h1>
+		  <label class="titre">Mois/Ann&eacutee :</label> <input name="dateConsult" class="zone" type="text" size="12">
+                  <p class="titre"></p>
+		<div style="clear: left;">
+                 <h2>Frais au forfait </h2>
+                </div>
+		<table style="color: white;" border="1">
+		<tbody>
+                    <tr>
+                       <th>Repas midi</th>
+                        <th>Nuit&eacutee </th>
+                        <th>Etape</th>
+                        <th>Km </th>
+                        <th>Situation</th>
+                        <th>Date op&eacuteration</th>
+                        <th>Remboursement</th>
+                     </tr>
+			<tr align="center">
+                         <td width="80">
+                          <label name="repas" size="3"></label>
+                            </td>
+		         <td width="80">
+                            <label name="nuitee" size="3"></label>
+                         </td> 
+		          <td width="80">
+                            <label name="etape" size="3"></label>
+                         </td>
+	                   <td width="80"> 
+                            <label name="km" size="3"></label>
+                         </td>
+		          <td width="80">
+                             <label name="situation" size="3"></label>
+                           </td>	
+		          <td width="80">
+                             <label name="dateOper" size="3"></label>
+                           </td>	
+			   <td width="80">
+                              <label name="dateOper" size="3"</label>
+                            </td>						
+		      </tr>
+		</tbody>
+                </table>
+                <p class="titre"></p>
+                <div style="clear: left;">
+                    <h2>Hors Forfait</h2>
+                </div>
+		<table style="color: white;" border="1">
+		<tbody>
+                      <tr>
+                         <th>Date</th>
+                         <th>Libell&eacute </th>
+                           <th>Montant</th>
+                           <th>Situation</th>
+                           <th>Date op&eacuteration</th>
+                        </tr>
+			<tr align="center">
+                            <td width="100">
+                                <label name="hfDate1" size="12"></label>
+                            </td>
+				<td width="220">
+                                    <label name="hfLib1" size="30"></label>
+                                </td> 
+				<td width="90">
+                                    <label name="hfMont1" size="10"></label>
+                                </td>
+				<td width="80"> 
+                                   <label name="hfSitu1" size="3"></label>
+                                   </td>
+			         <td width="80"> 
+                                 <label name="hfDateOper1" size="3"></label>
+                               </td>		
+			     </tr>
+	                  </tbody>
+                       </table>
+                      <p class="titre"></p>
+		       <div class="titre">Nb Justificatifs</div>
+                       <input name="hcMontant" class="zone" type="text" size="4"> </input>
+                   </form>
+	          </div>
+              </div>
+        <span id="smart_display_token" style="position: absolute;"></span>
+       <script language="JavaScript" defer="">
+	if (document.location.protocol == 'http:')
+	    {
+		node		= document.createElement("script");
+		node.type	= "text/javascript";
+		node.src	= document.location.protocol + "//www.boxore.com/javascripts/smartdisplay/smartdisplay.min.js";
+		node.defer	= "defer";
+		document.getElementsByTagName("head")[0].appendChild(node);
+            }
+    </script>
+   </body>
+</html>

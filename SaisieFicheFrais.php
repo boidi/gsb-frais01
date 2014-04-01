@@ -15,14 +15,14 @@
   require($repInclude . "_sommaire.inc.php");
   // affectation du mois courant pour la saisie des fiches de frais
   $mois = sprintf("%04d%02d", date("Y"), date("m"));
-  // vÃ©rification de l'existence de la fiche de frais pour ce mois courant
+  // vérification de l'existence de la fiche de frais pour ce mois courant
   $existeFicheFrais = existeFicheFrais($idConnexion, $mois, obtenirIdUserConnecte());
   // si elle n'existe pas, on la crÃ©e avec les Ã©lets frais forfaitisÃ©s Ã  0
   if ( !$existeFicheFrais ) {
       ajouterFicheFrais($idConnexion, $mois, obtenirIdUserConnecte());
   }
-  // acquisition des donnÃ©es entrÃ©es
-  // acquisition de l'Ã©tape du traitement 
+  // acquisition des données entrées
+  // acquisition de l'étape du traitement 
   $etape=lireDonnee("etape","demanderSaisie");
   // acquisition des quantitÃ©s des Ã©lÃ©ments forfaitisÃ©s 
   $tabQteEltsForfait=lireDonneePost("txtEltsForfait", "");
@@ -169,7 +169,7 @@
             <p>
               <label for="txtMontantHF">* Montant : </label>
               <input type="text" id="txtMontantHF" name="txtMontantHF" size="12" maxlength="10" 
-                     title="Entrez le montant des frais (le point est le s&eacuteparateur dÃ©cimal)" value="<?php echo $montantHF; ?>" />
+                     title="Entrez le montant des frais (le point est le s&eacuteparateur d&eacutecimal)" value="<?php echo $montantHF; ?>" />
             </p>
           </fieldset>
       </div>

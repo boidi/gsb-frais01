@@ -16,7 +16,7 @@
 function obtenirLibelleMois($unNoMois) {
     $tabLibelles = array(1=>"Janvier", 
                             "F&eacutevrier", "Mars", "Avril", "Mai", "Juin", "Juillet",
-                            "AoÃ»t", "Septembre", "Octobre", "Novembre", "D&eacutecembre");
+                            "Ao&ucirct", "Septembre", "Octobre", "Novembre", "D&eacutecembre");
     $libelle="";
     if ( $unNoMois >=1 && $unNoMois <= 12 ) {
         $libelle = $tabLibelles[$unNoMois];
@@ -236,7 +236,7 @@ function filtrerChainePourNavig($str) {
 }
 
 /** 
- * VÃ©rifie la validitÃ© des donnÃ©es d'une ligne de frais hors forfait.
+ * Vérifie la validité des données d'une ligne de frais hors forfait.
  *  
  * Renseigne le tableau des messages d'erreurs d'aprÃ¨s les erreurs rencontrÃ©es
  * sur chaque donnÃ©e d'une ligne de frais hors forfait : vÃ©rifie que chaque 
@@ -249,26 +249,26 @@ function filtrerChainePourNavig($str) {
  * @return void
  */ 
 function verifierLigneFraisHF($date, $libelle, $montant, &$tabErrs) {
-    // vÃ©rification du libellÃ© 
+    // vérification du libellÃ© 
     if ($libelle == "") {
-		ajouterErreur($tabErrs, "Le libellÃ© doit Ãªtre renseignÃ©.");
+		ajouterErreur($tabErrs, "Le libell&eacute doit Ãªtre renseign&eacute.");
 	}
-	// vÃ©rification du montant
+	// vérification du montant
 	if ($montant == "") {
-		ajouterErreur($tabErrs, "Le montant doit Ãªtre renseignÃ©.");
+		ajouterErreur($tabErrs, "Le montant doit &ecirctre renseign&eacute.");
 	}
 	elseif ( !is_numeric($montant) || $montant < 0 ) {
-        ajouterErreur($tabErrs, "Le montant doit Ãªtre numÃ©rique positif.");
+        ajouterErreur($tabErrs, "Le montant doit &ecirctre num&eacuterique positif.");
     }
-    // vÃ©rification de la date d'engagement
+    // vérification de la date d'engagement
 	if ($date == "") {
-		ajouterErreur($tabErrs, "La date d'engagement doit Ãªtre renseignÃ©e.");
+		ajouterErreur($tabErrs, "La date d'engagement doit &ecirctre renseign&eacutee.");
 	}
 	elseif (!estDate($date)) {
-		ajouterErreur($tabErrs, "La date d'engagement doit Ãªtre valide au format JJ/MM/AAAA");
+		ajouterErreur($tabErrs, "La date d'engagement doit &ecirctre valide au format JJ/MM/AAAA");
 	}	
 	elseif (!estDansAnneeEcoulee($date)) {
-	    ajouterErreur($tabErrs,"La date d'engagement doit se situer dans l'annÃ©e Ã©coulÃ©e");
+	    ajouterErreur($tabErrs,"La date d'engagement doit se situer dans l'ann&eacutee &eacutecoul&eacutee");
     }
 }
 ?>
