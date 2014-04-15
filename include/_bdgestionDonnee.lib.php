@@ -1,4 +1,4 @@
-<<?php
+<?php
 /** 
  * Regroupe les fonctions d'accès aux données.
  * @package default
@@ -7,9 +7,9 @@
  */
 
 /**
- * Se connecte au serveur de donnÃ©es MySql.                      
- * Se connecte au serveur de donnÃ©es MySql Ã  partir de valeurs
- * prÃ©dÃ©finies de connexion (hÃ´te, compte utilisateur et mot de passe). 
+ * Se connecte au serveur de données MySql.                      
+ * Se connecte au serveur de données MySql à  partir de valeurs
+ * prédéfinies de connexion (hôte, compte utilisateur et mot de passe). 
  * Retourne l'identifiant de connexion si succÃ¨s obtenu, le boolÃ©en false 
  * si problÃ¨me de connexion.
  * @return resource identifiant de connexion
@@ -22,24 +22,24 @@ function connecterServeurBD() {
 }
 
 /**
- * SÃ©lectionne (rend active) la base de donnÃ©es.
- * SÃ©lectionne (rend active) la BD prÃ©dÃ©finie gsb_frais sur la connexion
- * identifiÃ©e par $idCnx. Retourne true si succÃ¨s, false sinon.
+ * Sélectionne (rend active) la base de données.
+ * Sélectionne (rend active) la BD prédéfinie gsb_frais sur la connexion
+ * identifiée par $idCnx. Retourne true si succès, false sinon.
  * @param resource $idCnx identifiant de connexion
- * @return boolean succÃ¨s ou Ã©chec de sÃ©lection BD 
+ * @return boolean succès ou échec de sélection BD 
  */
 function activerBD($idCnx) {
     $bd = "gsb_frais";
     $query = "SET CHARACTER SET utf8";
-    // Modification du jeu de caractÃ¨res de la connexion
+    // Modification du jeu de caractères de la connexion
     $res = mysql_query($query, $idCnx);
     $ok = mysql_select_db($bd, $idCnx);
     return $ok;
 }
 
 /**
- * Ferme la connexion au serveur de donnÃ©es.
- * Ferme la connexion au serveur de donnÃ©es identifiÃ©e par l'identifiant de 
+ * Ferme la connexion au serveur de données.
+ * Ferme la connexion au serveur de données identifiée par l'identifiant de 
  * connexion $idCnx.
  * @param resource $idCnx identifiant de connexion
  * @return void  
@@ -49,17 +49,17 @@ function deconnecterServeurBD($idCnx) {
 }
 
 /**
- * Echappe les caractÃ¨res spÃ©ciaux d'une chaÃ®ne.
- * Envoie la chaÃ®ne $str Ã©chappÃ©e, cÃ d avec les caractÃ¨res considÃ©rÃ©s spÃ©ciaux
- * par MySql (tq la quote simple) prÃ©cÃ©dÃ©s d'un \, ce qui annule leur effet spÃ©cial
- * @param string $str chaÃ®ne Ã  Ã©chapper
- * @return string chaÃ®ne Ã©chappÃ©e 
+ * Echappe les caractères spéciaux d'une chaîne.
+ * Envoie la chaîne $str échappée, cÃ d avec les caractères considérés spéciaux
+ * par MySql (tq la quote simple) précédés d'un \, ce qui annule leur effet spécial
+ * @param string $str chaîne à  échapper
+ * @return string chaîne échappée 
  */
 function filtrerChainePourBD($str) {
     if (!get_magic_quotes_gpc()) {
         // si la directive de configuration magic_quotes_gpc est activÃ©e dans php.ini,
-        // toute chaÃ®ne reÃ§ue par get, post ou cookie est dÃ©jÃ  Ã©chappÃ©e 
-        // par consÃ©quent, il ne faut pas Ã©chapper la chaÃ®ne une seconde fois                              
+        // toute chaîne reçue par get, post ou cookie est déjà  échappée 
+        // par conséquent, il ne faut pas échapper la chaîne une seconde fois                              
         $str = mysql_real_escape_string($str);
     }
     return $str;
@@ -294,17 +294,17 @@ function ajouterLigneHF($idCnx, $unMois, $unIdVisiteur, $uneDateHF, $unLibelleHF
 }
 
 /**
- * Modifie les quantitÃ©s des Ã©lÃ©ments forfaitisÃ©s d'une fiche de frais. 
- * Met Ã  jour les Ã©lÃ©ments forfaitisÃ©s contenus  
+ * Modifie les quantités des éléments forfaitisés d'une fiche de frais. 
+ * Met à  jour les éléments forfaitisés contenus  
  * dans $desEltsForfaits pour le visiteur $unIdVisiteur et
- * le mois $unMois dans la table LigneFraisForfait, aprÃ¨s avoir filtrÃ© 
- * (annulÃ© l'effet de certains caractÃ¨res considÃ©rÃ©s comme spÃ©ciaux par 
- *  MySql) chaque donnÃ©e   
+ * le mois $unMois dans la table LigneFraisForfait, après avoir filtré 
+ * (annulé l'effet de certains caractères considérés comme spéciaux par 
+ *  MySql) chaque donnée   
  * @param resource $idCnx identifiant de connexion
- * @param string $unMois mois demandÃ© (MMAAAA) 
+ * @param string $unMois mois demandé (MMAAAA) 
  * @param string $unIdVisiteur  id visiteur
- * @param array $desEltsForfait tableau des quantitÃ©s des Ã©lÃ©ments hors forfait
- * avec pour clÃ©s les identifiants des frais forfaitisÃ©s 
+ * @param array $desEltsForfait tableau des quantités des éléments hors forfait
+ * avec pour clés les identifiants des frais forfaitisés 
  * @return void  
  */
 function modifierEltsForfait($idCnx, $unMois, $unIdVisiteur, $desEltsForfait) {
@@ -319,20 +319,20 @@ function modifierEltsForfait($idCnx, $unMois, $unIdVisiteur, $desEltsForfait) {
 }
 
 /**
- * ContrÃ´le les informations de connexionn d'un utilisateur.
- * VÃ©rifie si les informations de connexion $unLogin, $unMdp sont ou non valides.
+ * Contrôle les informations de connexionn d'un utilisateur.
+ * Vérifie si les informations de connexion $unLogin, $unMdp sont ou non validés.
  * Retourne les informations de l'utilisateur sous forme de tableau associatif 
- * dont les clÃ©s sont les noms des colonnes (id, nom, prenom, login, mdp)
- * si login et mot de passe existent, le boolÃ©en false sinon. 
+ * dont les clés sont les noms des colonnes (id, nom, prenom, login, mdp)
+ * si login et mot de passe existent, le booléen false sinon. 
  * @param resource $idCnx identifiant de connexion
  * @param string $unLogin login 
  * @param string $unMdp mot de passe 
- * @return array tableau associatif ou boolÃ©en false 
+ * @return array tableau associatif ou booléen false 
  */
 function verifierInfosConnexion($idCnx, $unLogin, $unMdp) {
     $unLogin = filtrerChainePourBD($unLogin);
     $unMdp = filtrerChainePourBD($unMdp);
-    // le mot de passe est cryptÃ© dans la base avec la fonction de hachage md5
+    // le mot de passe est crypté dans la base avec la fonction de hachage md5
     $req = "select id, nom, prenom, login, mdp, idType from utilisateur where login='" . $unLogin . "' and mdp='" . $unMdp . "'";
     $idJeuRes = mysql_query($req, $idCnx);
     $ligne = false;
@@ -344,10 +344,10 @@ function verifierInfosConnexion($idCnx, $unLogin, $unMdp) {
 }
 
 /**
- * Modifie l'Ã©tat et la date de modification d'une fiche de frais
+ * Modifie l'état et la date de modification d'une fiche de frais
  *
- * Met Ã  jour l'Ã©tat de la fiche de frais du visiteur $unIdVisiteur pour
- * le mois $unMois Ã  la nouvelle valeur $unEtat et passe la date de modif Ã  
+ * Met à  jour l'état de la fiche de frais du visiteur $unIdVisiteur pour
+ * le mois $unMois   la nouvelle valeur $unEtat et passe la date de modif à  
  * la date d'aujourd'hui
  * @param resource $idCnx identifiant de connexion
  * @param string $unIdVisiteur 
@@ -363,9 +363,9 @@ function modifierEtatFicheFrais($idCnx, $unMois, $unIdVisiteur, $unEtat) {
 }
 
 /**
- * Retourne la requete d'obtention de la liste des visiteurs mÃ©dicaux
+ * Retourne la requête d'obtention de la liste des visiteurs médicaux
  *
- * Retourne la requÃªte d'obtention de la liste des visiteurs mÃ©dicaux (id, nom et prenom)
+ * Retourne la requête d'obtention de la liste des visiteurs médicaux (id, nom et prenom)
  * @return string $requete
  */
 function obtenirReqListeVisiteurs() {
@@ -374,12 +374,12 @@ function obtenirReqListeVisiteurs() {
 }
 
 /**
- * Modifie les quantitÃ©s des Ã©lÃ©ments non forfaitisÃ©s d'une fiche de frais. 
- * Met Ã  jour les Ã©lÃ©ments non forfaitisÃ©s contenus  
+ * Modifie les quantités des éléments non forfaitisés d'une fiche de frais. 
+ * Met à jour les éléments non forfaitisés contenus  
  * dans $desEltsHorsForfaits
  * @param resource $idCnx identifiant de connexion
- * @param array $desEltsHorsForfait tableau des Ã©lÃ©ments hors forfait
- * avec pour clÃ©s les identifiants des frais hors forfait
+ * @param array $desEltsHorsForfait tableau des éléments hors forfait
+ * avec pour clés les identifiants des frais hors forfait
  * @return void  
  */
 function modifierEltsHorsForfait($idCnx, $desEltsHorsForfait) {
@@ -410,8 +410,8 @@ function modifierEltsHorsForfait($idCnx, $desEltsHorsForfait) {
 /**
  * Modifie le nombre de justificatifs d'une fiche de frais
  *
- * Met Ã  jour le nombre de justificatifs de la fiche de frais du visiteur $unIdVisiteur pour
- * le mois $unMois Ã  la nouvelle valeur $nbJustificatifs
+ * Met à  jour le nombre de justificatifs de la fiche de frais du visiteur $unIdVisiteur pour
+ * le mois $unMois à  la nouvelle valeur $nbJustificatifs
  * @param resource $idCnx identifiant de connexion
  * @param string $unIdVisiteur 
  * @param string $unMois mois sous la forme aaaamm
@@ -428,7 +428,7 @@ function modifierNbJustificatifsFicheFrais($idCnx, $unMois, $unIdVisiteur, $nbJu
  * Reporte d'un mois une ligne de frais hors forfait
  * 
  * 
- * @param resource $idCnx identifiant de connexion
+ * @param ressource $idCnx identifiant de connexion
  * @param int $unIdLigneHF identifiant de ligne hors forfait
  * @return void
  */
@@ -437,10 +437,10 @@ function reporterLigneHorsForfait($idCnx, $unIdLigneHF) {
 }
 
 /**
- * Cloture les fiches de frais antÃ©rieur au mois $unMois
+ * Cloture les fiches de frais antérieur au mois $unMois
  *
- * Cloture les fiches de frais antÃ©rieur au mois $unMois
- * et au besoin, crÃ©er une nouvelle de fiche de frais pour le mois courant
+ * Cloture les fiches de frais antérieur au mois $unMois
+ * et au besoin, créer une nouvelle de fiche de frais pour le mois courant
  * @param resource $idCnx identifiant de connexion
   * @param string $unMois mois sous la forme aaaamm
   * @return void 
@@ -450,9 +450,9 @@ function cloturerFichesFrais($idCnx, $unMois) {
     $idJeuFichesFrais = mysql_query($req, $idCnx);
     while ($lgFicheFrais = mysql_fetch_array($idJeuFichesFrais)) {
         modifierEtatFicheFrais($idCnx, $lgFicheFrais['mois'], $lgFicheFrais['idVisiteur'], 'CL');
-        // VÃ©rification de l'existence de la fiche de frais pour le mois courant
+        // Vérification de l'existence de la fiche de frais pour le mois courant
         $existeFicheFrais = existeFicheFrais($idCnx, $unMois, $lgFicheFrais['idVisiteur']);
-        // si elle n'existe pas, on la crÃ©e avec les Ã©lÃ©ments de frais forfaitisÃ©s Ã  0
+        // si elle n'existe pas, on la crée avec les éléments de frais forfaitisés à  0
         if (!$existeFicheFrais) {
             ajouterFicheFrais($idCnx, $unMois, $lgFicheFrais['idVisiteur']);
         }

@@ -8,7 +8,7 @@
 	<title>File include/_gestionSession.lib.php | gsb_frais</title>
 
 	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
-	<script type="text/javascript" src="elementlist.js?2597401053"></script>
+	<script type="text/javascript" src="elementlist.js?1637158304"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -40,25 +40,47 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-activerBD.html">activerBD</a></li>
 				<li><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></li>
 				<li><a href="function-ajouterErreur.html">ajouterErreur</a></li>
+				<li><a href="function-ajouterFicheFrais.html">ajouterFicheFrais</a></li>
+				<li><a href="function-ajouterLigneHF.html">ajouterLigneHF</a></li>
+				<li><a href="function-cloturerFichesFrais.html">cloturerFichesFrais</a></li>
+				<li><a href="function-connecterServeurBD.html">connecterServeurBD</a></li>
 				<li><a href="function-convertirDateAnglaisVersFrancais.html">convertirDateAnglaisVersFrancais</a></li>
 				<li><a href="function-convertirDateFrancaisVersAnglais.html">convertirDateFrancaisVersAnglais</a></li>
-				<li><a href="function-deconnecterVisiteur.html">deconnecterVisiteur</a></li>
+				<li><a href="function-deconnecterServeurBD.html">deconnecterServeurBD</a></li>
+				<li><a href="function-deconnecterUtilisateur.html">deconnecterUtilisateur</a></li>
 				<li><a href="function-estDansAnneeEcoulee.html">estDansAnneeEcoulee</a></li>
 				<li><a href="function-estDate.html">estDate</a></li>
 				<li><a href="function-estEntierPositif.html">estEntierPositif</a></li>
-				<li class="active"><a href="function-estVisiteurConnecte.html">estVisiteurConnecte</a></li>
+				<li class="active"><a href="function-estUtilisateurConnecte.html">estUtilisateurConnecte</a></li>
+				<li><a href="function-existeFicheFrais.html">existeFicheFrais</a></li>
+				<li><a href="function-filtrerChainePourBD.html">filtrerChainePourBD</a></li>
 				<li><a href="function-filtrerChainePourNavig.html">filtrerChainePourNavig</a></li>
 				<li><a href="function-initSession.html">initSession</a></li>
 				<li><a href="function-lireDonnee.html">lireDonnee</a></li>
 				<li><a href="function-lireDonneePost.html">lireDonneePost</a></li>
 				<li><a href="function-lireDonneeUrl.html">lireDonneeUrl</a></li>
+				<li><a href="function-modifierEltsForfait.html">modifierEltsForfait</a></li>
+				<li><a href="function-modifierEltsHorsForfait.html">modifierEltsHorsForfait</a></li>
+				<li><a href="function-modifierEtatFicheFrais.html">modifierEtatFicheFrais</a></li>
+				<li><a href="function-modifierNbJustificatifsFicheFrais.html">modifierNbJustificatifsFicheFrais</a></li>
 				<li><a href="function-nbErreurs.html">nbErreurs</a></li>
+				<li><a href="function-obtenirDernierMoisSaisi.html">obtenirDernierMoisSaisi</a></li>
+				<li><a href="function-obtenirDetailFicheFrais.html">obtenirDetailFicheFrais</a></li>
+				<li><a href="function-obtenirDetailUtilisateur.html">obtenirDetailUtilisateur</a></li>
 				<li><a href="function-obtenirIdUserConnecte.html">obtenirIdUserConnecte</a></li>
 				<li><a href="function-obtenirLibelleMois.html">obtenirLibelleMois</a></li>
+				<li><a href="function-obtenirReqEltsForfaitFicheFrais.html">obtenirReqEltsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqEltsHorsForfaitFicheFrais.html">obtenirReqEltsHorsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqListeVisiteurs.html">obtenirReqListeVisiteurs</a></li>
+				<li><a href="function-obtenirReqMoisFicheFrais.html">obtenirReqMoisFicheFrais</a></li>
+				<li><a href="function-reporterLigneHorsForfait.html">reporterLigneHorsForfait</a></li>
+				<li><a href="function-supprimerLigneHF.html">supprimerLigneHF</a></li>
 				<li><a href="function-toStringErreurs.html">toStringErreurs</a></li>
 				<li><a href="function-verifierEntiersPositifs.html">verifierEntiersPositifs</a></li>
+				<li><a href="function-verifierInfosConnexion.html">verifierInfosConnexion</a></li>
 				<li><a href="function-verifierLigneFraisHF.html">verifierLigneFraisHF</a></li>
 			</ul>
 		</div>
@@ -85,7 +107,7 @@
 				<a href="package-default.html" title="Summary of default"><span>Package</span></a>
 			</li>
 			<li>
-				<a href="function-estVisiteurConnecte.html" title="Summary of estVisiteurConnecte"><span>Function</span></a>
+				<a href="function-estUtilisateurConnecte.html" title="Summary of estUtilisateurConnecte"><span>Function</span></a>
 			</li>
 		</ul>
 		<ul>
@@ -105,7 +127,7 @@
 </span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> */</span>
 </span><span id="7" class="l"><a class="l" href="#7"> 7: </a>
 </span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment">/** 
-</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> * DÃ©marre ou poursuit une session.                     
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-comment"> * Démarre ou poursuit une session.                     
 </span></span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment"> *
 </span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> * @return void
 </span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> */</span>
@@ -114,10 +136,10 @@
 </span><span id="15" class="l"><a class="l" href="#15">15: </a>}
 </span><span id="16" class="l"><a class="l" href="#16">16: </a>
 </span><span id="17" class="l"><a class="l" href="#17">17: </a><span class="php-comment">/** 
-</span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment"> * Fournit l'id du visiteur connectÃ©.                     
+</span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment"> * Fournit l'id de l'utilisateur connecté.                     
 </span></span><span id="19" class="l"><a class="l" href="#19">19: </a><span class="php-comment"> *
-</span></span><span id="20" class="l"><a class="l" href="#20">20: </a><span class="php-comment"> * Retourne l'id du visiteur connectÃ©, une chaÃ®ne vide si pas de visiteur connectÃ©.
-</span></span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-comment"> * @return string id du visiteur connectÃ©
+</span></span><span id="20" class="l"><a class="l" href="#20">20: </a><span class="php-comment"> * Retourne l'id de l'utilisateur connecté, une chaîne vide si pas d'utilisateur connecté.
+</span></span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-comment"> * @return string id de l'utilisateur connecté
 </span></span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="php-comment"> */</span>
 </span><span id="23" class="l"><a class="l" href="#23">23: </a><span class="php-keyword1">function</span> <a id="_obtenirIdUserConnecte" href="#_obtenirIdUserConnecte">obtenirIdUserConnecte</a>() {
 </span><span id="24" class="l"><a class="l" href="#24">24: </a>    <span class="php-var">$ident</span>=<span class="php-quote">&quot;&quot;</span>;
@@ -128,39 +150,40 @@
 </span><span id="29" class="l"><a class="l" href="#29">29: </a>}
 </span><span id="30" class="l"><a class="l" href="#30">30: </a>
 </span><span id="31" class="l"><a class="l" href="#31">31: </a><span class="php-comment">/**
-</span></span><span id="32" class="l"><a class="l" href="#32">32: </a><span class="php-comment"> * Conserve en variables session les informations du visiteur connectÃ©
+</span></span><span id="32" class="l"><a class="l" href="#32">32: </a><span class="php-comment"> * Conserve en variables session les informations de l'utilisateur connecté
 </span></span><span id="33" class="l"><a class="l" href="#33">33: </a><span class="php-comment"> * 
-</span></span><span id="34" class="l"><a class="l" href="#34">34: </a><span class="php-comment"> * Conserve en variables session l'id $id et le login $login du visiteur connectÃ©
-</span></span><span id="35" class="l"><a class="l" href="#35">35: </a><span class="php-comment"> * @param string id du visiteur
-</span></span><span id="36" class="l"><a class="l" href="#36">36: </a><span class="php-comment"> * @param string login du visiteur
+</span></span><span id="34" class="l"><a class="l" href="#34">34: </a><span class="php-comment"> * Conserve en variables session l'id $id et le login $login de l'utilisateur connecté
+</span></span><span id="35" class="l"><a class="l" href="#35">35: </a><span class="php-comment"> * @param string id de l'utilisateur
+</span></span><span id="36" class="l"><a class="l" href="#36">36: </a><span class="php-comment"> * @param string type de l'utilisateur
 </span></span><span id="37" class="l"><a class="l" href="#37">37: </a><span class="php-comment"> * @return void    
 </span></span><span id="38" class="l"><a class="l" href="#38">38: </a><span class="php-comment"> */</span>
 </span><span id="39" class="l"><a class="l" href="#39">39: </a><span class="php-keyword1">function</span> <a id="_affecterInfosConnecte" href="#_affecterInfosConnecte">affecterInfosConnecte</a>(<span class="php-var">$id</span>, <span class="php-var">$login</span>) {
 </span><span id="40" class="l"><a class="l" href="#40">40: </a>    <span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;idUser&quot;</span>] = <span class="php-var">$id</span>;
 </span><span id="41" class="l"><a class="l" href="#41">41: </a>    <span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;loginUser&quot;</span>] = <span class="php-var">$login</span>;
-</span><span id="42" class="l"><a class="l" href="#42">42: </a>}
-</span><span id="43" class="l"><a class="l" href="#43">43: </a>
-</span><span id="44" class="l"><a class="l" href="#44">44: </a><span class="php-comment">/** 
-</span></span><span id="45" class="l"><a class="l" href="#45">45: </a><span class="php-comment"> * DÃ©connecte le visiteur qui s'est identifiÃ© sur le site.                     
-</span></span><span id="46" class="l"><a class="l" href="#46">46: </a><span class="php-comment"> *
-</span></span><span id="47" class="l"><a class="l" href="#47">47: </a><span class="php-comment"> * @return void
-</span></span><span id="48" class="l"><a class="l" href="#48">48: </a><span class="php-comment"> */</span>
-</span><span id="49" class="l"><a class="l" href="#49">49: </a><span class="php-keyword1">function</span> <a id="_deconnecterVisiteur" href="#_deconnecterVisiteur">deconnecterVisiteur</a>() {
-</span><span id="50" class="l"><a class="l" href="#50">50: </a>    <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;idUser&quot;</span>]);
-</span><span id="51" class="l"><a class="l" href="#51">51: </a>    <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;loginUser&quot;</span>]);
-</span><span id="52" class="l"><a class="l" href="#52">52: </a>}
-</span><span id="53" class="l"><a class="l" href="#53">53: </a>
-</span><span id="54" class="l"><a class="l" href="#54">54: </a><span class="php-comment">/** 
-</span></span><span id="55" class="l"><a class="l" href="#55">55: </a><span class="php-comment"> * VÃ©rifie si un visiteur s'est connectÃ© sur le site.                     
-</span></span><span id="56" class="l"><a class="l" href="#56">56: </a><span class="php-comment"> *
-</span></span><span id="57" class="l"><a class="l" href="#57">57: </a><span class="php-comment"> * Retourne true si un visiteur s'est identifiÃ© sur le site, false sinon. 
-</span></span><span id="58" class="l"><a class="l" href="#58">58: </a><span class="php-comment"> * @return boolean Ã©chec ou succÃ¨s
-</span></span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-comment"> */</span>
-</span><span id="60" class="l"><a class="l" href="#60">60: </a><span class="php-keyword1">function</span> <a id="_estVisiteurConnecte" href="#_estVisiteurConnecte">estVisiteurConnecte</a>() {
-</span><span id="61" class="l"><a class="l" href="#61">61: </a>    <span class="php-comment">// actuellement il n'y a que les visiteurs qui se connectent</span>
-</span><span id="62" class="l"><a class="l" href="#62">62: </a>    <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;loginUser&quot;</span>]);
-</span><span id="63" class="l"><a class="l" href="#63">63: </a>}
-</span><span id="64" class="l"><a class="l" href="#64">64: </a></span><span class="xlang">?&gt;</span></code></pre>
+</span><span id="42" class="l"><a class="l" href="#42">42: </a>    <span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;typeUser&quot;</span>] = <span class="php-var">$type</span>;
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>}
+</span><span id="44" class="l"><a class="l" href="#44">44: </a>
+</span><span id="45" class="l"><a class="l" href="#45">45: </a><span class="php-comment">/** 
+</span></span><span id="46" class="l"><a class="l" href="#46">46: </a><span class="php-comment"> * Déconnecte l'utilisateur qui s'est identifié sur le site.                     
+</span></span><span id="47" class="l"><a class="l" href="#47">47: </a><span class="php-comment"> *
+</span></span><span id="48" class="l"><a class="l" href="#48">48: </a><span class="php-comment"> * @return void
+</span></span><span id="49" class="l"><a class="l" href="#49">49: </a><span class="php-comment"> */</span>
+</span><span id="50" class="l"><a class="l" href="#50">50: </a><span class="php-keyword1">function</span> <a id="_deconnecterUtilisateur" href="#_deconnecterUtilisateur">deconnecterUtilisateur</a>() {
+</span><span id="51" class="l"><a class="l" href="#51">51: </a>    <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;idUser&quot;</span>]);
+</span><span id="52" class="l"><a class="l" href="#52">52: </a>    <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;loginUser&quot;</span>]);
+</span><span id="53" class="l"><a class="l" href="#53">53: </a>    <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;typeUser&quot;</span>]);
+</span><span id="54" class="l"><a class="l" href="#54">54: </a>}
+</span><span id="55" class="l"><a class="l" href="#55">55: </a>
+</span><span id="56" class="l"><a class="l" href="#56">56: </a><span class="php-comment">/** 
+</span></span><span id="57" class="l"><a class="l" href="#57">57: </a><span class="php-comment"> * Vérifie si un utilisateur s'est connecté sur le site.                     
+</span></span><span id="58" class="l"><a class="l" href="#58">58: </a><span class="php-comment"> *
+</span></span><span id="59" class="l"><a class="l" href="#59">59: </a><span class="php-comment"> * Retourne true si un utilisateur s'est identifié sur le site, false sinon. 
+</span></span><span id="60" class="l"><a class="l" href="#60">60: </a><span class="php-comment"> * @return boolean échec ou succès
+</span></span><span id="61" class="l"><a class="l" href="#61">61: </a><span class="php-comment"> */</span>
+</span><span id="62" class="l"><a class="l" href="#62">62: </a><span class="php-keyword1">function</span> <a id="_estUtilisateurConnecte" href="#_estUtilisateurConnecte">estUtilisateurConnecte</a>() {
+</span><span id="63" class="l"><a class="l" href="#63">63: </a>    <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">&quot;loginUser&quot;</span>]);
+</span><span id="64" class="l"><a class="l" href="#64">64: </a>}
+</span><span id="65" class="l"><a class="l" href="#65">65: </a></span><span class="xlang">?&gt;</span></code></pre>
 
 	<div id="footer">
 		gsb_frais API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>

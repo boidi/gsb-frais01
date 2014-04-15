@@ -62,10 +62,10 @@ if ($etape == "choixVisiteur") {
                 break;
         }
     }
-    // vÃ©rification de la validitÃ© des donnÃ©es d'une ligne de frais hors forfait
+    // vérification de la validité des données d'une ligne de frais hors forfait
     verifierLigneFraisHF($dateFraisHorsForfait, $libelleFraisHorsForfait, $montantFraisHorsForfait, $tabErreurs);
     if (nbErreurs($tabErreurs) == 0) {
-        // mise Ã  jour des quantitÃ©s des Ã©lÃ©ments non forfaitisÃ©s
+        // mise à  jour des quantités des éléments non forfaitisés
         modifierEltsHorsForfait($idConnexion, $tabEltsHorsForfait);
     }
 } elseif ($etape == "reporterLigneFraisHF") {

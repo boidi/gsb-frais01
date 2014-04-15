@@ -828,7 +828,7 @@ function Write($h, $txt, $link='')
 		if($l>$wmax)
 		{
 			// Automatic line break
-			if($sep==-1)
+			if($sep == -1)
 			{
 				if($this->x>$this->lMargin)
 				{
@@ -1022,11 +1022,11 @@ function Output($name='', $dest='')
 			break;
 		case 'F':
 			// Save to local file
-			$f = fopen($name,'wb');
-			if(!$f)
+			$fichier = fopen($name,'wb');
+			if(!$fichier)
 				$this->Error('Unable to create output file: '.$name);
-			fwrite($f,$this->buffer,strlen($this->buffer));
-			fclose($f);
+			fwrite($fichier,$this->buffer,strlen($this->buffer));
+			fclose($fichier);
 			break;
 		case 'S':
 			// Return as a string

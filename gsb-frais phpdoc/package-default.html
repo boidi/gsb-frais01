@@ -7,7 +7,7 @@
 	<title>Package default | gsb_frais</title>
 
 	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
-	<script type="text/javascript" src="elementlist.js?2597401053"></script>
+	<script type="text/javascript" src="elementlist.js?1637158304"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -39,25 +39,47 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-activerBD.html">activerBD</a></li>
 				<li><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></li>
 				<li><a href="function-ajouterErreur.html">ajouterErreur</a></li>
+				<li><a href="function-ajouterFicheFrais.html">ajouterFicheFrais</a></li>
+				<li><a href="function-ajouterLigneHF.html">ajouterLigneHF</a></li>
+				<li><a href="function-cloturerFichesFrais.html">cloturerFichesFrais</a></li>
+				<li><a href="function-connecterServeurBD.html">connecterServeurBD</a></li>
 				<li><a href="function-convertirDateAnglaisVersFrancais.html">convertirDateAnglaisVersFrancais</a></li>
 				<li><a href="function-convertirDateFrancaisVersAnglais.html">convertirDateFrancaisVersAnglais</a></li>
-				<li><a href="function-deconnecterVisiteur.html">deconnecterVisiteur</a></li>
+				<li><a href="function-deconnecterServeurBD.html">deconnecterServeurBD</a></li>
+				<li><a href="function-deconnecterUtilisateur.html">deconnecterUtilisateur</a></li>
 				<li><a href="function-estDansAnneeEcoulee.html">estDansAnneeEcoulee</a></li>
 				<li><a href="function-estDate.html">estDate</a></li>
 				<li><a href="function-estEntierPositif.html">estEntierPositif</a></li>
-				<li><a href="function-estVisiteurConnecte.html">estVisiteurConnecte</a></li>
+				<li><a href="function-estUtilisateurConnecte.html">estUtilisateurConnecte</a></li>
+				<li><a href="function-existeFicheFrais.html">existeFicheFrais</a></li>
+				<li><a href="function-filtrerChainePourBD.html">filtrerChainePourBD</a></li>
 				<li><a href="function-filtrerChainePourNavig.html">filtrerChainePourNavig</a></li>
 				<li><a href="function-initSession.html">initSession</a></li>
 				<li><a href="function-lireDonnee.html">lireDonnee</a></li>
 				<li><a href="function-lireDonneePost.html">lireDonneePost</a></li>
 				<li><a href="function-lireDonneeUrl.html">lireDonneeUrl</a></li>
+				<li><a href="function-modifierEltsForfait.html">modifierEltsForfait</a></li>
+				<li><a href="function-modifierEltsHorsForfait.html">modifierEltsHorsForfait</a></li>
+				<li><a href="function-modifierEtatFicheFrais.html">modifierEtatFicheFrais</a></li>
+				<li><a href="function-modifierNbJustificatifsFicheFrais.html">modifierNbJustificatifsFicheFrais</a></li>
 				<li><a href="function-nbErreurs.html">nbErreurs</a></li>
+				<li><a href="function-obtenirDernierMoisSaisi.html">obtenirDernierMoisSaisi</a></li>
+				<li><a href="function-obtenirDetailFicheFrais.html">obtenirDetailFicheFrais</a></li>
+				<li><a href="function-obtenirDetailUtilisateur.html">obtenirDetailUtilisateur</a></li>
 				<li><a href="function-obtenirIdUserConnecte.html">obtenirIdUserConnecte</a></li>
 				<li><a href="function-obtenirLibelleMois.html">obtenirLibelleMois</a></li>
+				<li><a href="function-obtenirReqEltsForfaitFicheFrais.html">obtenirReqEltsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqEltsHorsForfaitFicheFrais.html">obtenirReqEltsHorsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqListeVisiteurs.html">obtenirReqListeVisiteurs</a></li>
+				<li><a href="function-obtenirReqMoisFicheFrais.html">obtenirReqMoisFicheFrais</a></li>
+				<li><a href="function-reporterLigneHorsForfait.html">reporterLigneHorsForfait</a></li>
+				<li><a href="function-supprimerLigneHF.html">supprimerLigneHF</a></li>
 				<li><a href="function-toStringErreurs.html">toStringErreurs</a></li>
 				<li><a href="function-verifierEntiersPositifs.html">verifierEntiersPositifs</a></li>
+				<li><a href="function-verifierInfosConnexion.html">verifierInfosConnexion</a></li>
 				<li><a href="function-verifierLigneFraisHF.html">verifierLigneFraisHF</a></li>
 			</ul>
 		</div>
@@ -107,13 +129,45 @@
 <table class="summary" id="functions">
 <caption>Functions summary</caption>
 <tr>
-	<td class="name"><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></td>
-	<td>Conserve en variables session les informations du visiteur connectÃ©
+	<td class="name"><a href="function-activerBD.html">activerBD</a></td>
+	<td>Sélectionne (rend active) la base de données. Sélectionne (rend active) la BD
+prédéfinie gsb_frais sur la connexion identifiée par $idCnx. Retourne true si
+succès, false sinon.
 <!-- by Texy2! --></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></td>
+	<td>Conserve en variables session les informations de l'utilisateur connecté</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-ajouterErreur.html">ajouterErreur</a></td>
 	<td>Ajoute un message dans le tableau des messages d'erreurs.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-ajouterFicheFrais.html">ajouterFicheFrais</a></td>
+	<td>Ajoute une nouvelle fiche de frais et les Ã©lÃ©ments forfaitisÃ©s
+associÃ©s, Ajoute la fiche de frais du mois de $unMois (MMAAAA) du visiteur
+$idVisiteur, avec les Ã©lÃ©ments forfaitisÃ©s associÃ©s dont la
+quantitÃ© initiale est affectÃ©e Ã  0. ClÃ´t Ã©ventuellement la fiche
+de frais prÃ©cÃ©dente du visiteur.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-ajouterLigneHF.html">ajouterLigneHF</a></td>
+	<td>Ajoute une nouvelle ligne hors forfait. InsÃ¨re dans la BD la ligne hors
+forfait de libellÃ© $unLibelleHF du montant $unMontantHF ayant eu lieu Ã  la
+date $uneDateHF pour la fiche de frais du mois $unMois du visiteur d'id
+$unIdVisiteur</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-cloturerFichesFrais.html">cloturerFichesFrais</a></td>
+	<td>Cloture les fiches de frais antÃ©rieur au mois $unMois</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-connecterServeurBD.html">connecterServeurBD</a></td>
+	<td>Se connecte au serveur de données MySql. Se connecte au serveur de données
+MySql à  partir de valeurs prédéfinies de connexion (hôte, compte
+utilisateur et mot de passe). Retourne l'identifiant de connexion si succÃ¨s
+obtenu, le boolÃ©en false si problÃ¨me de connexion.</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-convertirDateAnglaisVersFrancais.html">convertirDateAnglaisVersFrancais</a></td>
@@ -126,8 +180,13 @@ franÃ§ais jj/mm/aaaa</td>
 aaaa-mm-jj</td>
 </tr>
 <tr>
-	<td class="name"><a href="function-deconnecterVisiteur.html">deconnecterVisiteur</a></td>
-	<td>DÃ©connecte le visiteur qui s'est identifiÃ© sur le site.</td>
+	<td class="name"><a href="function-deconnecterServeurBD.html">deconnecterServeurBD</a></td>
+	<td>Ferme la connexion au serveur de données. Ferme la connexion au serveur de
+données identifiée par l'identifiant de connexion $idCnx.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-deconnecterUtilisateur.html">deconnecterUtilisateur</a></td>
+	<td>Déconnecte l'utilisateur qui s'est identifié sur le site.</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-estDansAnneeEcoulee.html">estDansAnneeEcoulee</a></td>
@@ -143,8 +202,19 @@ JJ/MM/AAAA.</td>
 	<td>VÃ©rifie si une chaÃ®ne fournie est bien numÃ©rique entiÃ¨re positive.</td>
 </tr>
 <tr>
-	<td class="name"><a href="function-estVisiteurConnecte.html">estVisiteurConnecte</a></td>
-	<td>VÃ©rifie si un visiteur s'est connectÃ© sur le site.</td>
+	<td class="name"><a href="function-estUtilisateurConnecte.html">estUtilisateurConnecte</a></td>
+	<td>Vérifie si un utilisateur s'est connecté sur le site.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-existeFicheFrais.html">existeFicheFrais</a></td>
+	<td>VÃ©rifie si une fiche de frais existe ou non. Retourne true si la fiche de
+frais du mois de $unMois (MMAAAA) du visiteur $idVisiteur existe, false sinon.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-filtrerChainePourBD.html">filtrerChainePourBD</a></td>
+	<td>Echappe les caractères spéciaux d'une chaîne. Envoie la chaîne $str
+échappée, cÃ d avec les caractères considérés spéciaux par MySql (tq la
+quote simple) précédés d'un \, ce qui annule leur effet spécial</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-filtrerChainePourNavig.html">filtrerChainePourNavig</a></td>
@@ -153,7 +223,7 @@ entitÃ©s HTML correspondantes.</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-initSession.html">initSession</a></td>
-	<td>DÃ©marre ou poursuit une session.</td>
+	<td>Démarre ou poursuit une session.</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-lireDonnee.html">lireDonnee</a></td>
@@ -170,16 +240,84 @@ requÃªte HTTP).</td>
 	<td>Fournit la valeur d'une donnÃ©e transmise par la mÃ©thode get (url).</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-modifierEltsForfait.html">modifierEltsForfait</a></td>
+	<td>Modifie les quantitÃ©s des Ã©lÃ©ments forfaitisÃ©s d'une fiche de frais.
+Met Ã  jour les Ã©lÃ©ments forfaitisÃ©s contenus dans $desEltsForfaits
+pour le visiteur $unIdVisiteur et le mois $unMois dans la table
+LigneFraisForfait, aprÃ¨s avoir filtrÃ© (annulÃ© l'effet de certains
+caractÃ¨res considÃ©rÃ©s comme spÃ©ciaux par MySql) chaque donnÃ©e</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-modifierEltsHorsForfait.html">modifierEltsHorsForfait</a></td>
+	<td>Modifie les quantitÃ©s des Ã©lÃ©ments non forfaitisÃ©s d'une fiche de
+frais. Met Ã  jour les Ã©lÃ©ments non forfaitisÃ©s contenus dans
+$desEltsHorsForfaits</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-modifierEtatFicheFrais.html">modifierEtatFicheFrais</a></td>
+	<td>Modifie l'Ã©tat et la date de modification d'une fiche de frais</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-modifierNbJustificatifsFicheFrais.html">modifierNbJustificatifsFicheFrais</a></td>
+	<td>Modifie le nombre de justificatifs d'une fiche de frais</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-nbErreurs.html">nbErreurs</a></td>
 	<td>Retourne le nombre de messages d'erreurs enregistrÃ©s.</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-obtenirDernierMoisSaisi.html">obtenirDernierMoisSaisi</a></td>
+	<td>Fournit le mois de la derniÃ¨re fiche de frais d'un visiteur. Retourne le mois
+de la derniÃ¨re fiche de frais du visiteur d'id $unIdVisiteur.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirDetailFicheFrais.html">obtenirDetailFicheFrais</a></td>
+	<td>Fournit les informations d'une fiche de frais. Retourne les informations de la
+fiche de frais du mois de $unMois (MMAAAA) sous la forme d'un tableau associatif
+dont les clÃ©s sont les noms des colonnes (nbJustitificatifs, idEtat,
+libelleEtat, dateModif, montantValide).</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirDetailUtilisateur.html">obtenirDetailUtilisateur</a></td>
+	<td>Fournit les informations sur un utilisateur demandÃ©. Retourne les
+informations du utilisateur d'id $unId sous la forme d'un tableau associatif
+dont les clÃ©s sont les noms des colonnes(id, nom, prenom).</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-obtenirIdUserConnecte.html">obtenirIdUserConnecte</a></td>
-	<td>Fournit l'id du visiteur connectÃ©.</td>
+	<td>Fournit l'id de l'utilisateur connecté.</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-obtenirLibelleMois.html">obtenirLibelleMois</a></td>
 	<td>Fournit le libellÃ© en franÃ§ais correspondant Ã  un numÃ©ro de mois.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirReqEltsForfaitFicheFrais.html">obtenirReqEltsForfaitFicheFrais</a></td>
+	<td>Retourne le texte de la requÃªte select concernant les Ã©lÃ©ments
+forfaitisÃ©s d'un visiteur pour un mois donnÃ©s.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirReqEltsHorsForfaitFicheFrais.html">obtenirReqEltsHorsForfaitFicheFrais</a></td>
+	<td>Retourne le texte de la requÃªte select concernant les Ã©lÃ©ments hors
+forfait d'un visiteur pour un mois donnÃ©s.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirReqListeVisiteurs.html">obtenirReqListeVisiteurs</a></td>
+	<td>Retourne la requete d'obtention de la liste des visiteurs mÃ©dicaux</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-obtenirReqMoisFicheFrais.html">obtenirReqMoisFicheFrais</a></td>
+	<td>Retourne le texte de la requÃªte select concernant les mois pour lesquels un
+visiteur a une fiche de frais.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-reporterLigneHorsForfait.html">reporterLigneHorsForfait</a></td>
+	<td>Reporte d'un mois une ligne de frais hors forfait</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-supprimerLigneHF.html">supprimerLigneHF</a></td>
+	<td>Supprime une ligne hors forfait. Supprime dans la BD la ligne hors forfait d'id
+$unIdLigneHF</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-toStringErreurs.html">toStringErreurs</a></td>
@@ -191,8 +329,16 @@ requÃªte HTTP).</td>
 positive.</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-verifierInfosConnexion.html">verifierInfosConnexion</a></td>
+	<td>ContrÃ´le les informations de connexionn d'un utilisateur. VÃ©rifie si les
+informations de connexion $unLogin, $unMdp sont ou non valides. Retourne les
+informations de l'utilisateur sous forme de tableau associatif dont les clÃ©s
+sont les noms des colonnes (id, nom, prenom, login, mdp) si login et mot de
+passe existent, le boolÃ©en false sinon.</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-verifierLigneFraisHF.html">verifierLigneFraisHF</a></td>
-	<td>VÃ©rifie la validitÃ© des donnÃ©es d'une ligne de frais hors forfait.</td>
+	<td>Vérifie la validité des données d'une ligne de frais hors forfait.</td>
 </tr>
 </table>
 </div>

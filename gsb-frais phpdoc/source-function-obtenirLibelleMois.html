@@ -8,7 +8,7 @@
 	<title>File include/_utilitairesEtgestionerreurs.lib.php | gsb_frais</title>
 
 	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
-	<script type="text/javascript" src="elementlist.js?2597401053"></script>
+	<script type="text/javascript" src="elementlist.js?1637158304"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -40,25 +40,47 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-activerBD.html">activerBD</a></li>
 				<li><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></li>
 				<li><a href="function-ajouterErreur.html">ajouterErreur</a></li>
+				<li><a href="function-ajouterFicheFrais.html">ajouterFicheFrais</a></li>
+				<li><a href="function-ajouterLigneHF.html">ajouterLigneHF</a></li>
+				<li><a href="function-cloturerFichesFrais.html">cloturerFichesFrais</a></li>
+				<li><a href="function-connecterServeurBD.html">connecterServeurBD</a></li>
 				<li><a href="function-convertirDateAnglaisVersFrancais.html">convertirDateAnglaisVersFrancais</a></li>
 				<li><a href="function-convertirDateFrancaisVersAnglais.html">convertirDateFrancaisVersAnglais</a></li>
-				<li><a href="function-deconnecterVisiteur.html">deconnecterVisiteur</a></li>
+				<li><a href="function-deconnecterServeurBD.html">deconnecterServeurBD</a></li>
+				<li><a href="function-deconnecterUtilisateur.html">deconnecterUtilisateur</a></li>
 				<li><a href="function-estDansAnneeEcoulee.html">estDansAnneeEcoulee</a></li>
 				<li><a href="function-estDate.html">estDate</a></li>
 				<li><a href="function-estEntierPositif.html">estEntierPositif</a></li>
-				<li><a href="function-estVisiteurConnecte.html">estVisiteurConnecte</a></li>
+				<li><a href="function-estUtilisateurConnecte.html">estUtilisateurConnecte</a></li>
+				<li><a href="function-existeFicheFrais.html">existeFicheFrais</a></li>
+				<li><a href="function-filtrerChainePourBD.html">filtrerChainePourBD</a></li>
 				<li><a href="function-filtrerChainePourNavig.html">filtrerChainePourNavig</a></li>
 				<li><a href="function-initSession.html">initSession</a></li>
 				<li><a href="function-lireDonnee.html">lireDonnee</a></li>
 				<li><a href="function-lireDonneePost.html">lireDonneePost</a></li>
 				<li><a href="function-lireDonneeUrl.html">lireDonneeUrl</a></li>
+				<li><a href="function-modifierEltsForfait.html">modifierEltsForfait</a></li>
+				<li><a href="function-modifierEltsHorsForfait.html">modifierEltsHorsForfait</a></li>
+				<li><a href="function-modifierEtatFicheFrais.html">modifierEtatFicheFrais</a></li>
+				<li><a href="function-modifierNbJustificatifsFicheFrais.html">modifierNbJustificatifsFicheFrais</a></li>
 				<li><a href="function-nbErreurs.html">nbErreurs</a></li>
+				<li><a href="function-obtenirDernierMoisSaisi.html">obtenirDernierMoisSaisi</a></li>
+				<li><a href="function-obtenirDetailFicheFrais.html">obtenirDetailFicheFrais</a></li>
+				<li><a href="function-obtenirDetailUtilisateur.html">obtenirDetailUtilisateur</a></li>
 				<li><a href="function-obtenirIdUserConnecte.html">obtenirIdUserConnecte</a></li>
 				<li class="active"><a href="function-obtenirLibelleMois.html">obtenirLibelleMois</a></li>
+				<li><a href="function-obtenirReqEltsForfaitFicheFrais.html">obtenirReqEltsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqEltsHorsForfaitFicheFrais.html">obtenirReqEltsHorsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqListeVisiteurs.html">obtenirReqListeVisiteurs</a></li>
+				<li><a href="function-obtenirReqMoisFicheFrais.html">obtenirReqMoisFicheFrais</a></li>
+				<li><a href="function-reporterLigneHorsForfait.html">reporterLigneHorsForfait</a></li>
+				<li><a href="function-supprimerLigneHF.html">supprimerLigneHF</a></li>
 				<li><a href="function-toStringErreurs.html">toStringErreurs</a></li>
 				<li><a href="function-verifierEntiersPositifs.html">verifierEntiersPositifs</a></li>
+				<li><a href="function-verifierInfosConnexion.html">verifierInfosConnexion</a></li>
 				<li><a href="function-verifierLigneFraisHF.html">verifierLigneFraisHF</a></li>
 			</ul>
 		</div>
@@ -115,7 +137,7 @@
 </span><span id="16" class="l"><a class="l" href="#16"> 16: </a><span class="php-keyword1">function</span> <a id="_obtenirLibelleMois" href="#_obtenirLibelleMois">obtenirLibelleMois</a>(<span class="php-var">$unNoMois</span>) {
 </span><span id="17" class="l"><a class="l" href="#17"> 17: </a>    <span class="php-var">$tabLibelles</span> = <span class="php-keyword1">array</span>(<span class="php-num">1</span>=&gt;<span class="php-quote">&quot;Janvier&quot;</span>, 
 </span><span id="18" class="l"><a class="l" href="#18"> 18: </a>                            <span class="php-quote">&quot;F&amp;eacutevrier&quot;</span>, <span class="php-quote">&quot;Mars&quot;</span>, <span class="php-quote">&quot;Avril&quot;</span>, <span class="php-quote">&quot;Mai&quot;</span>, <span class="php-quote">&quot;Juin&quot;</span>, <span class="php-quote">&quot;Juillet&quot;</span>,
-</span><span id="19" class="l"><a class="l" href="#19"> 19: </a>                            <span class="php-quote">&quot;AoÃ»t&quot;</span>, <span class="php-quote">&quot;Septembre&quot;</span>, <span class="php-quote">&quot;Octobre&quot;</span>, <span class="php-quote">&quot;Novembre&quot;</span>, <span class="php-quote">&quot;D&amp;eacutecembre&quot;</span>);
+</span><span id="19" class="l"><a class="l" href="#19"> 19: </a>                            <span class="php-quote">&quot;Ao&amp;ucirct&quot;</span>, <span class="php-quote">&quot;Septembre&quot;</span>, <span class="php-quote">&quot;Octobre&quot;</span>, <span class="php-quote">&quot;Novembre&quot;</span>, <span class="php-quote">&quot;D&amp;eacutecembre&quot;</span>);
 </span><span id="20" class="l"><a class="l" href="#20"> 20: </a>    <span class="php-var">$libelle</span>=<span class="php-quote">&quot;&quot;</span>;
 </span><span id="21" class="l"><a class="l" href="#21"> 21: </a>    <span class="php-keyword1">if</span> ( <span class="php-var">$unNoMois</span> &gt;=<span class="php-num">1</span> &amp;&amp; <span class="php-var">$unNoMois</span> &lt;= <span class="php-num">12</span> ) {
 </span><span id="22" class="l"><a class="l" href="#22"> 22: </a>        <span class="php-var">$libelle</span> = <span class="php-var">$tabLibelles</span>[<span class="php-var">$unNoMois</span>];
@@ -335,7 +357,7 @@
 </span><span id="236" class="l"><a class="l" href="#236">236: </a>}
 </span><span id="237" class="l"><a class="l" href="#237">237: </a>
 </span><span id="238" class="l"><a class="l" href="#238">238: </a><span class="php-comment">/** 
-</span></span><span id="239" class="l"><a class="l" href="#239">239: </a><span class="php-comment"> * VÃ©rifie la validitÃ© des donnÃ©es d'une ligne de frais hors forfait.
+</span></span><span id="239" class="l"><a class="l" href="#239">239: </a><span class="php-comment"> * Vérifie la validité des données d'une ligne de frais hors forfait.
 </span></span><span id="240" class="l"><a class="l" href="#240">240: </a><span class="php-comment"> *  
 </span></span><span id="241" class="l"><a class="l" href="#241">241: </a><span class="php-comment"> * Renseigne le tableau des messages d'erreurs d'aprÃ¨s les erreurs rencontrÃ©es
 </span></span><span id="242" class="l"><a class="l" href="#242">242: </a><span class="php-comment"> * sur chaque donnÃ©e d'une ligne de frais hors forfait : vÃ©rifie que chaque 
@@ -348,26 +370,26 @@
 </span></span><span id="249" class="l"><a class="l" href="#249">249: </a><span class="php-comment"> * @return void
 </span></span><span id="250" class="l"><a class="l" href="#250">250: </a><span class="php-comment"> */</span> 
 </span><span id="251" class="l"><a class="l" href="#251">251: </a><span class="php-keyword1">function</span> <a id="_verifierLigneFraisHF" href="#_verifierLigneFraisHF">verifierLigneFraisHF</a>(<span class="php-var">$date</span>, <span class="php-var">$libelle</span>, <span class="php-var">$montant</span>, &amp;<span class="php-var">$tabErrs</span>) {
-</span><span id="252" class="l"><a class="l" href="#252">252: </a>    <span class="php-comment">// vÃ©rification du libellÃ© </span>
+</span><span id="252" class="l"><a class="l" href="#252">252: </a>    <span class="php-comment">// vérification du libellÃ© </span>
 </span><span id="253" class="l"><a class="l" href="#253">253: </a>    <span class="php-keyword1">if</span> (<span class="php-var">$libelle</span> == <span class="php-quote">&quot;&quot;</span>) {
-</span><span id="254" class="l"><a class="l" href="#254">254: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le libellÃ© doit Ãªtre renseignÃ©.&quot;</span>);
+</span><span id="254" class="l"><a class="l" href="#254">254: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le libell&amp;eacute doit Ãªtre renseign&amp;eacute.&quot;</span>);
 </span><span id="255" class="l"><a class="l" href="#255">255: </a>    }
-</span><span id="256" class="l"><a class="l" href="#256">256: </a>    <span class="php-comment">// vÃ©rification du montant</span>
+</span><span id="256" class="l"><a class="l" href="#256">256: </a>    <span class="php-comment">// vérification du montant</span>
 </span><span id="257" class="l"><a class="l" href="#257">257: </a>    <span class="php-keyword1">if</span> (<span class="php-var">$montant</span> == <span class="php-quote">&quot;&quot;</span>) {
-</span><span id="258" class="l"><a class="l" href="#258">258: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le montant doit Ãªtre renseignÃ©.&quot;</span>);
+</span><span id="258" class="l"><a class="l" href="#258">258: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le montant doit &amp;ecirctre renseign&amp;eacute.&quot;</span>);
 </span><span id="259" class="l"><a class="l" href="#259">259: </a>    }
 </span><span id="260" class="l"><a class="l" href="#260">260: </a>    <span class="php-keyword1">elseif</span> ( !<span class="php-keyword2">is_numeric</span>(<span class="php-var">$montant</span>) || <span class="php-var">$montant</span> &lt; <span class="php-num">0</span> ) {
-</span><span id="261" class="l"><a class="l" href="#261">261: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le montant doit Ãªtre numÃ©rique positif.&quot;</span>);
+</span><span id="261" class="l"><a class="l" href="#261">261: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;Le montant doit &amp;ecirctre num&amp;eacuterique positif.&quot;</span>);
 </span><span id="262" class="l"><a class="l" href="#262">262: </a>    }
-</span><span id="263" class="l"><a class="l" href="#263">263: </a>    <span class="php-comment">// vÃ©rification de la date d'engagement</span>
+</span><span id="263" class="l"><a class="l" href="#263">263: </a>    <span class="php-comment">// vérification de la date d'engagement</span>
 </span><span id="264" class="l"><a class="l" href="#264">264: </a>    <span class="php-keyword1">if</span> (<span class="php-var">$date</span> == <span class="php-quote">&quot;&quot;</span>) {
-</span><span id="265" class="l"><a class="l" href="#265">265: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;La date d'engagement doit Ãªtre renseignÃ©e.&quot;</span>);
+</span><span id="265" class="l"><a class="l" href="#265">265: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;La date d'engagement doit &amp;ecirctre renseign&amp;eacutee.&quot;</span>);
 </span><span id="266" class="l"><a class="l" href="#266">266: </a>    }
 </span><span id="267" class="l"><a class="l" href="#267">267: </a>    <span class="php-keyword1">elseif</span> (!estDate(<span class="php-var">$date</span>)) {
-</span><span id="268" class="l"><a class="l" href="#268">268: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;La date d'engagement doit Ãªtre valide au format JJ/MM/AAAA&quot;</span>);
+</span><span id="268" class="l"><a class="l" href="#268">268: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>, <span class="php-quote">&quot;La date d'engagement doit &amp;ecirctre valide au format JJ/MM/AAAA&quot;</span>);
 </span><span id="269" class="l"><a class="l" href="#269">269: </a>    }   
 </span><span id="270" class="l"><a class="l" href="#270">270: </a>    <span class="php-keyword1">elseif</span> (!estDansAnneeEcoulee(<span class="php-var">$date</span>)) {
-</span><span id="271" class="l"><a class="l" href="#271">271: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>,<span class="php-quote">&quot;La date d'engagement doit se situer dans l'annÃ©e Ã©coulÃ©e&quot;</span>);
+</span><span id="271" class="l"><a class="l" href="#271">271: </a>        ajouterErreur(<span class="php-var">$tabErrs</span>,<span class="php-quote">&quot;La date d'engagement doit se situer dans l'ann&amp;eacutee &amp;eacutecoul&amp;eacutee&quot;</span>);
 </span><span id="272" class="l"><a class="l" href="#272">272: </a>    }
 </span><span id="273" class="l"><a class="l" href="#273">273: </a>}
 </span><span id="274" class="l"><a class="l" href="#274">274: </a><span class="xlang">?&gt;</span>

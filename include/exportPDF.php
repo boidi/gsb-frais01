@@ -1,8 +1,8 @@
 <?php
-require("_gestionSession.lib.php");
+ require("_gestionSession.lib.php");
 
 // démarrage ou reprise de la session
-initSession();
+ initSession();
 
 // page inaccessible si utilisateur non connecté
 if (!estUtilisateurConnecte()) {

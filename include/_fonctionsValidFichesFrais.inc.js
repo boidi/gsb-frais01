@@ -83,7 +83,7 @@ function getModifsEnCours() {
             return modif;
         }
     }
-    return modif
+    return modif;
 }
 function actualiserLigneFraisForfait(rep,nui,etp,km) {
     // Trouver quelles sont les mises à jour à réaliser

@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Function estVisiteurConnecte | gsb_frais</title>
+	<title>Function reporterLigneHorsForfait | gsb_frais</title>
 
 	<script type="text/javascript" src="resources/combined.js?2882499003"></script>
-	<script type="text/javascript" src="elementlist.js?2597401053"></script>
+	<script type="text/javascript" src="elementlist.js?1637158304"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -39,25 +39,47 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-activerBD.html">activerBD</a></li>
 				<li><a href="function-affecterInfosConnecte.html">affecterInfosConnecte</a></li>
 				<li><a href="function-ajouterErreur.html">ajouterErreur</a></li>
+				<li><a href="function-ajouterFicheFrais.html">ajouterFicheFrais</a></li>
+				<li><a href="function-ajouterLigneHF.html">ajouterLigneHF</a></li>
+				<li><a href="function-cloturerFichesFrais.html">cloturerFichesFrais</a></li>
+				<li><a href="function-connecterServeurBD.html">connecterServeurBD</a></li>
 				<li><a href="function-convertirDateAnglaisVersFrancais.html">convertirDateAnglaisVersFrancais</a></li>
 				<li><a href="function-convertirDateFrancaisVersAnglais.html">convertirDateFrancaisVersAnglais</a></li>
-				<li><a href="function-deconnecterVisiteur.html">deconnecterVisiteur</a></li>
+				<li><a href="function-deconnecterServeurBD.html">deconnecterServeurBD</a></li>
+				<li><a href="function-deconnecterUtilisateur.html">deconnecterUtilisateur</a></li>
 				<li><a href="function-estDansAnneeEcoulee.html">estDansAnneeEcoulee</a></li>
 				<li><a href="function-estDate.html">estDate</a></li>
 				<li><a href="function-estEntierPositif.html">estEntierPositif</a></li>
-				<li class="active"><a href="function-estVisiteurConnecte.html">estVisiteurConnecte</a></li>
+				<li><a href="function-estUtilisateurConnecte.html">estUtilisateurConnecte</a></li>
+				<li><a href="function-existeFicheFrais.html">existeFicheFrais</a></li>
+				<li><a href="function-filtrerChainePourBD.html">filtrerChainePourBD</a></li>
 				<li><a href="function-filtrerChainePourNavig.html">filtrerChainePourNavig</a></li>
 				<li><a href="function-initSession.html">initSession</a></li>
 				<li><a href="function-lireDonnee.html">lireDonnee</a></li>
 				<li><a href="function-lireDonneePost.html">lireDonneePost</a></li>
 				<li><a href="function-lireDonneeUrl.html">lireDonneeUrl</a></li>
+				<li><a href="function-modifierEltsForfait.html">modifierEltsForfait</a></li>
+				<li><a href="function-modifierEltsHorsForfait.html">modifierEltsHorsForfait</a></li>
+				<li><a href="function-modifierEtatFicheFrais.html">modifierEtatFicheFrais</a></li>
+				<li><a href="function-modifierNbJustificatifsFicheFrais.html">modifierNbJustificatifsFicheFrais</a></li>
 				<li><a href="function-nbErreurs.html">nbErreurs</a></li>
+				<li><a href="function-obtenirDernierMoisSaisi.html">obtenirDernierMoisSaisi</a></li>
+				<li><a href="function-obtenirDetailFicheFrais.html">obtenirDetailFicheFrais</a></li>
+				<li><a href="function-obtenirDetailUtilisateur.html">obtenirDetailUtilisateur</a></li>
 				<li><a href="function-obtenirIdUserConnecte.html">obtenirIdUserConnecte</a></li>
 				<li><a href="function-obtenirLibelleMois.html">obtenirLibelleMois</a></li>
+				<li><a href="function-obtenirReqEltsForfaitFicheFrais.html">obtenirReqEltsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqEltsHorsForfaitFicheFrais.html">obtenirReqEltsHorsForfaitFicheFrais</a></li>
+				<li><a href="function-obtenirReqListeVisiteurs.html">obtenirReqListeVisiteurs</a></li>
+				<li><a href="function-obtenirReqMoisFicheFrais.html">obtenirReqMoisFicheFrais</a></li>
+				<li class="active"><a href="function-reporterLigneHorsForfait.html">reporterLigneHorsForfait</a></li>
+				<li><a href="function-supprimerLigneHF.html">supprimerLigneHF</a></li>
 				<li><a href="function-toStringErreurs.html">toStringErreurs</a></li>
 				<li><a href="function-verifierEntiersPositifs.html">verifierEntiersPositifs</a></li>
+				<li><a href="function-verifierInfosConnexion.html">verifierInfosConnexion</a></li>
 				<li><a href="function-verifierLigneFraisHF.html">verifierLigneFraisHF</a></li>
 			</ul>
 		</div>
@@ -96,36 +118,42 @@
 	</div>
 
 <div id="content" class="function">
-	<h1>Function estVisiteurConnecte</h1>
+	<h1>Function reporterLigneHorsForfait</h1>
 
 
 	<div class="description">
 	
-<p>VÃ©rifie si un visiteur s'est connectÃ© sur le site.</p>
-
-<p>Retourne true si un visiteur s'est identifiÃ© sur le site, false sinon.</p>
+<p>Reporte d'un mois une ligne de frais hors forfait</p>
 
 	</div>
 
 	<div class="info">
 		
 		<b>Package:</b> <a href="package-default.html">default</a><br />
-		<b>Located at</b> <a href="source-function-estVisiteurConnecte.html#54-63" title="Go to source code">include/_gestionSession.lib.php</a><br />
+				<b>Author:</b>
+				Yvette Boidi<br />
+		<b>Located at</b> <a href="source-function-reporterLigneHorsForfait.html#427-437" title="Go to source code">include/_bdgestionDonnee.lib.php</a><br />
 	</div>
 
 
-
-	<table class="summary" id="returns">
-	<caption>Return value summary</caption>
-	<tr>
-		<td class="name"><code>
-			boolean
-		</code></td>
+	<table class="summary" id="parameters">
+	<caption>Parameters summary</caption>
+	<tr id="$idCnx">
+		<td class="name"><code>resource</code></td>
+		<td class="value"><code><var>$idCnx</var></code></td>
 		<td>
-			Ã©chec ou succÃ¨s
+			 identifiant de connexion
+		</td>
+	</tr>
+	<tr id="$unIdLigneHF">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$unIdLigneHF</var></code></td>
+		<td>
+			 identifiant de ligne hors forfait
 		</td>
 	</tr>
 	</table>
+
 
 
 </div>
