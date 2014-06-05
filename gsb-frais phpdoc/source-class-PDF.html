@@ -97,10 +97,10 @@
 	</div>
 
 <pre><code><span id="1" class="l"><a class="l" href="#1">  1: </a><span class="xlang">&lt;?php</span>
-</span><span id="2" class="l"><a class="l" href="#2">  2: </a><span class="php-keyword1">require</span>(<span class="php-quote">&quot;_gestionSession.lib.php&quot;</span>);
+</span><span id="2" class="l"><a class="l" href="#2">  2: </a> <span class="php-keyword1">require</span>(<span class="php-quote">&quot;_gestionSession.lib.php&quot;</span>);
 </span><span id="3" class="l"><a class="l" href="#3">  3: </a>
 </span><span id="4" class="l"><a class="l" href="#4">  4: </a><span class="php-comment">// démarrage ou reprise de la session</span>
-</span><span id="5" class="l"><a class="l" href="#5">  5: </a>initSession();
+</span><span id="5" class="l"><a class="l" href="#5">  5: </a> initSession();
 </span><span id="6" class="l"><a class="l" href="#6">  6: </a>
 </span><span id="7" class="l"><a class="l" href="#7">  7: </a><span class="php-comment">// page inaccessible si utilisateur non connecté</span>
 </span><span id="8" class="l"><a class="l" href="#8">  8: </a><span class="php-keyword1">if</span> (!estUtilisateurConnecte()) {

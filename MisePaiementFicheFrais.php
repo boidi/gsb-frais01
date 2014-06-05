@@ -9,7 +9,7 @@ require($repInclude . "_init.inc.php");
 
 // page inaccessible si utilisateur non connectÃ©
 if (!estUtilisateurConnecte()) {
-    header("Location: cSeConnecter.php");
+    header("Location: Seconnecter.php");
 }
 require($repInclude . "entete.inc.html");
 require($repInclude . "_sommaire.inc.php");

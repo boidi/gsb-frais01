@@ -8,6 +8,6 @@
   require($repInclude . "_init.inc.php");
   
   deconnecterUtilisateur() ;  
-  header("Location:SeConnecter.php");
+  header("Location:Seconnecter.php");
   
 ?>

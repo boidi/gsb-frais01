@@ -415,17 +415,17 @@
 </span><span id="294" class="l"><a class="l" href="#294">294: </a>}
 </span><span id="295" class="l"><a class="l" href="#295">295: </a>
 </span><span id="296" class="l"><a class="l" href="#296">296: </a><span class="php-comment">/**
-</span></span><span id="297" class="l"><a class="l" href="#297">297: </a><span class="php-comment"> * Modifie les quantitÃ©s des Ã©lÃ©ments forfaitisÃ©s d'une fiche de frais. 
-</span></span><span id="298" class="l"><a class="l" href="#298">298: </a><span class="php-comment"> * Met Ã  jour les Ã©lÃ©ments forfaitisÃ©s contenus  
+</span></span><span id="297" class="l"><a class="l" href="#297">297: </a><span class="php-comment"> * Modifie les quantités des éléments forfaitisés d'une fiche de frais. 
+</span></span><span id="298" class="l"><a class="l" href="#298">298: </a><span class="php-comment"> * Met à  jour les éléments forfaitisés contenus  
 </span></span><span id="299" class="l"><a class="l" href="#299">299: </a><span class="php-comment"> * dans $desEltsForfaits pour le visiteur $unIdVisiteur et
-</span></span><span id="300" class="l"><a class="l" href="#300">300: </a><span class="php-comment"> * le mois $unMois dans la table LigneFraisForfait, aprÃ¨s avoir filtrÃ© 
-</span></span><span id="301" class="l"><a class="l" href="#301">301: </a><span class="php-comment"> * (annulÃ© l'effet de certains caractÃ¨res considÃ©rÃ©s comme spÃ©ciaux par 
-</span></span><span id="302" class="l"><a class="l" href="#302">302: </a><span class="php-comment"> *  MySql) chaque donnÃ©e   
+</span></span><span id="300" class="l"><a class="l" href="#300">300: </a><span class="php-comment"> * le mois $unMois dans la table LigneFraisForfait, après avoir filtré 
+</span></span><span id="301" class="l"><a class="l" href="#301">301: </a><span class="php-comment"> * (annulé l'effet de certains caractères considérés comme spéciaux par 
+</span></span><span id="302" class="l"><a class="l" href="#302">302: </a><span class="php-comment"> *  MySql) chaque donnée   
 </span></span><span id="303" class="l"><a class="l" href="#303">303: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
-</span></span><span id="304" class="l"><a class="l" href="#304">304: </a><span class="php-comment"> * @param string $unMois mois demandÃ© (MMAAAA) 
+</span></span><span id="304" class="l"><a class="l" href="#304">304: </a><span class="php-comment"> * @param string $unMois mois demandé (MMAAAA) 
 </span></span><span id="305" class="l"><a class="l" href="#305">305: </a><span class="php-comment"> * @param string $unIdVisiteur  id visiteur
-</span></span><span id="306" class="l"><a class="l" href="#306">306: </a><span class="php-comment"> * @param array $desEltsForfait tableau des quantitÃ©s des Ã©lÃ©ments hors forfait
-</span></span><span id="307" class="l"><a class="l" href="#307">307: </a><span class="php-comment"> * avec pour clÃ©s les identifiants des frais forfaitisÃ©s 
+</span></span><span id="306" class="l"><a class="l" href="#306">306: </a><span class="php-comment"> * @param array $desEltsForfait tableau des quantités des éléments hors forfait
+</span></span><span id="307" class="l"><a class="l" href="#307">307: </a><span class="php-comment"> * avec pour clés les identifiants des frais forfaitisés 
 </span></span><span id="308" class="l"><a class="l" href="#308">308: </a><span class="php-comment"> * @return void  
 </span></span><span id="309" class="l"><a class="l" href="#309">309: </a><span class="php-comment"> */</span>
 </span><span id="310" class="l"><a class="l" href="#310">310: </a><span class="php-keyword1">function</span> <a id="_modifierEltsForfait" href="#_modifierEltsForfait">modifierEltsForfait</a>(<span class="php-var">$idCnx</span>, <span class="php-var">$unMois</span>, <span class="php-var">$unIdVisiteur</span>, <span class="php-var">$desEltsForfait</span>) {
@@ -440,20 +440,20 @@
 </span><span id="319" class="l"><a class="l" href="#319">319: </a>}
 </span><span id="320" class="l"><a class="l" href="#320">320: </a>
 </span><span id="321" class="l"><a class="l" href="#321">321: </a><span class="php-comment">/**
-</span></span><span id="322" class="l"><a class="l" href="#322">322: </a><span class="php-comment"> * ContrÃ´le les informations de connexionn d'un utilisateur.
-</span></span><span id="323" class="l"><a class="l" href="#323">323: </a><span class="php-comment"> * VÃ©rifie si les informations de connexion $unLogin, $unMdp sont ou non valides.
+</span></span><span id="322" class="l"><a class="l" href="#322">322: </a><span class="php-comment"> * Contrôle les informations de connexionn d'un utilisateur.
+</span></span><span id="323" class="l"><a class="l" href="#323">323: </a><span class="php-comment"> * Vérifie si les informations de connexion $unLogin, $unMdp sont ou non validés.
 </span></span><span id="324" class="l"><a class="l" href="#324">324: </a><span class="php-comment"> * Retourne les informations de l'utilisateur sous forme de tableau associatif 
-</span></span><span id="325" class="l"><a class="l" href="#325">325: </a><span class="php-comment"> * dont les clÃ©s sont les noms des colonnes (id, nom, prenom, login, mdp)
-</span></span><span id="326" class="l"><a class="l" href="#326">326: </a><span class="php-comment"> * si login et mot de passe existent, le boolÃ©en false sinon. 
+</span></span><span id="325" class="l"><a class="l" href="#325">325: </a><span class="php-comment"> * dont les clés sont les noms des colonnes (id, nom, prenom, login, mdp)
+</span></span><span id="326" class="l"><a class="l" href="#326">326: </a><span class="php-comment"> * si login et mot de passe existent, le booléen false sinon. 
 </span></span><span id="327" class="l"><a class="l" href="#327">327: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
 </span></span><span id="328" class="l"><a class="l" href="#328">328: </a><span class="php-comment"> * @param string $unLogin login 
 </span></span><span id="329" class="l"><a class="l" href="#329">329: </a><span class="php-comment"> * @param string $unMdp mot de passe 
-</span></span><span id="330" class="l"><a class="l" href="#330">330: </a><span class="php-comment"> * @return array tableau associatif ou boolÃ©en false 
+</span></span><span id="330" class="l"><a class="l" href="#330">330: </a><span class="php-comment"> * @return array tableau associatif ou booléen false 
 </span></span><span id="331" class="l"><a class="l" href="#331">331: </a><span class="php-comment"> */</span>
 </span><span id="332" class="l"><a class="l" href="#332">332: </a><span class="php-keyword1">function</span> <a id="_verifierInfosConnexion" href="#_verifierInfosConnexion">verifierInfosConnexion</a>(<span class="php-var">$idCnx</span>, <span class="php-var">$unLogin</span>, <span class="php-var">$unMdp</span>) {
 </span><span id="333" class="l"><a class="l" href="#333">333: </a>    <span class="php-var">$unLogin</span> = filtrerChainePourBD(<span class="php-var">$unLogin</span>);
 </span><span id="334" class="l"><a class="l" href="#334">334: </a>    <span class="php-var">$unMdp</span> = filtrerChainePourBD(<span class="php-var">$unMdp</span>);
-</span><span id="335" class="l"><a class="l" href="#335">335: </a>    <span class="php-comment">// le mot de passe est cryptÃ© dans la base avec la fonction de hachage md5</span>
+</span><span id="335" class="l"><a class="l" href="#335">335: </a>    <span class="php-comment">// le mot de passe est crypté dans la base avec la fonction de hachage md5</span>
 </span><span id="336" class="l"><a class="l" href="#336">336: </a>    <span class="php-var">$req</span> = <span class="php-quote">&quot;select id, nom, prenom, login, mdp, idType from utilisateur where login='&quot;</span> . <span class="php-var">$unLogin</span> . <span class="php-quote">&quot;' and mdp='&quot;</span> . <span class="php-var">$unMdp</span> . <span class="php-quote">&quot;'&quot;</span>;
 </span><span id="337" class="l"><a class="l" href="#337">337: </a>    <span class="php-var">$idJeuRes</span> = <span class="php-keyword2">mysql_query</span>(<span class="php-var">$req</span>, <span class="php-var">$idCnx</span>);
 </span><span id="338" class="l"><a class="l" href="#338">338: </a>    <span class="php-var">$ligne</span> = <span class="php-keyword1">false</span>;
@@ -465,10 +465,10 @@
 </span><span id="344" class="l"><a class="l" href="#344">344: </a>}
 </span><span id="345" class="l"><a class="l" href="#345">345: </a>
 </span><span id="346" class="l"><a class="l" href="#346">346: </a><span class="php-comment">/**
-</span></span><span id="347" class="l"><a class="l" href="#347">347: </a><span class="php-comment"> * Modifie l'Ã©tat et la date de modification d'une fiche de frais
+</span></span><span id="347" class="l"><a class="l" href="#347">347: </a><span class="php-comment"> * Modifie l'état et la date de modification d'une fiche de frais
 </span></span><span id="348" class="l"><a class="l" href="#348">348: </a><span class="php-comment"> *
-</span></span><span id="349" class="l"><a class="l" href="#349">349: </a><span class="php-comment"> * Met Ã  jour l'Ã©tat de la fiche de frais du visiteur $unIdVisiteur pour
-</span></span><span id="350" class="l"><a class="l" href="#350">350: </a><span class="php-comment"> * le mois $unMois Ã  la nouvelle valeur $unEtat et passe la date de modif Ã  
+</span></span><span id="349" class="l"><a class="l" href="#349">349: </a><span class="php-comment"> * Met à  jour l'état de la fiche de frais du visiteur $unIdVisiteur pour
+</span></span><span id="350" class="l"><a class="l" href="#350">350: </a><span class="php-comment"> * le mois $unMois   la nouvelle valeur $unEtat et passe la date de modif à  
 </span></span><span id="351" class="l"><a class="l" href="#351">351: </a><span class="php-comment"> * la date d'aujourd'hui
 </span></span><span id="352" class="l"><a class="l" href="#352">352: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
 </span></span><span id="353" class="l"><a class="l" href="#353">353: </a><span class="php-comment"> * @param string $unIdVisiteur 
@@ -484,9 +484,9 @@
 </span><span id="363" class="l"><a class="l" href="#363">363: </a>}
 </span><span id="364" class="l"><a class="l" href="#364">364: </a>
 </span><span id="365" class="l"><a class="l" href="#365">365: </a><span class="php-comment">/**
-</span></span><span id="366" class="l"><a class="l" href="#366">366: </a><span class="php-comment"> * Retourne la requete d'obtention de la liste des visiteurs mÃ©dicaux
+</span></span><span id="366" class="l"><a class="l" href="#366">366: </a><span class="php-comment"> * Retourne la requête d'obtention de la liste des visiteurs médicaux
 </span></span><span id="367" class="l"><a class="l" href="#367">367: </a><span class="php-comment"> *
-</span></span><span id="368" class="l"><a class="l" href="#368">368: </a><span class="php-comment"> * Retourne la requÃªte d'obtention de la liste des visiteurs mÃ©dicaux (id, nom et prenom)
+</span></span><span id="368" class="l"><a class="l" href="#368">368: </a><span class="php-comment"> * Retourne la requête d'obtention de la liste des visiteurs médicaux (id, nom et prenom)
 </span></span><span id="369" class="l"><a class="l" href="#369">369: </a><span class="php-comment"> * @return string $requete
 </span></span><span id="370" class="l"><a class="l" href="#370">370: </a><span class="php-comment"> */</span>
 </span><span id="371" class="l"><a class="l" href="#371">371: </a><span class="php-keyword1">function</span> <a id="_obtenirReqListeVisiteurs" href="#_obtenirReqListeVisiteurs">obtenirReqListeVisiteurs</a>() {
@@ -495,12 +495,12 @@
 </span><span id="374" class="l"><a class="l" href="#374">374: </a>}
 </span><span id="375" class="l"><a class="l" href="#375">375: </a>
 </span><span id="376" class="l"><a class="l" href="#376">376: </a><span class="php-comment">/**
-</span></span><span id="377" class="l"><a class="l" href="#377">377: </a><span class="php-comment"> * Modifie les quantitÃ©s des Ã©lÃ©ments non forfaitisÃ©s d'une fiche de frais. 
-</span></span><span id="378" class="l"><a class="l" href="#378">378: </a><span class="php-comment"> * Met Ã  jour les Ã©lÃ©ments non forfaitisÃ©s contenus  
+</span></span><span id="377" class="l"><a class="l" href="#377">377: </a><span class="php-comment"> * Modifie les quantités des éléments non forfaitisés d'une fiche de frais. 
+</span></span><span id="378" class="l"><a class="l" href="#378">378: </a><span class="php-comment"> * Met à jour les éléments non forfaitisés contenus  
 </span></span><span id="379" class="l"><a class="l" href="#379">379: </a><span class="php-comment"> * dans $desEltsHorsForfaits
 </span></span><span id="380" class="l"><a class="l" href="#380">380: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
-</span></span><span id="381" class="l"><a class="l" href="#381">381: </a><span class="php-comment"> * @param array $desEltsHorsForfait tableau des Ã©lÃ©ments hors forfait
-</span></span><span id="382" class="l"><a class="l" href="#382">382: </a><span class="php-comment"> * avec pour clÃ©s les identifiants des frais hors forfait
+</span></span><span id="381" class="l"><a class="l" href="#381">381: </a><span class="php-comment"> * @param array $desEltsHorsForfait tableau des éléments hors forfait
+</span></span><span id="382" class="l"><a class="l" href="#382">382: </a><span class="php-comment"> * avec pour clés les identifiants des frais hors forfait
 </span></span><span id="383" class="l"><a class="l" href="#383">383: </a><span class="php-comment"> * @return void  
 </span></span><span id="384" class="l"><a class="l" href="#384">384: </a><span class="php-comment"> */</span>
 </span><span id="385" class="l"><a class="l" href="#385">385: </a><span class="php-keyword1">function</span> <a id="_modifierEltsHorsForfait" href="#_modifierEltsHorsForfait">modifierEltsHorsForfait</a>(<span class="php-var">$idCnx</span>, <span class="php-var">$desEltsHorsForfait</span>) {
@@ -531,8 +531,8 @@
 </span><span id="410" class="l"><a class="l" href="#410">410: </a><span class="php-comment">/**
 </span></span><span id="411" class="l"><a class="l" href="#411">411: </a><span class="php-comment"> * Modifie le nombre de justificatifs d'une fiche de frais
 </span></span><span id="412" class="l"><a class="l" href="#412">412: </a><span class="php-comment"> *
-</span></span><span id="413" class="l"><a class="l" href="#413">413: </a><span class="php-comment"> * Met Ã  jour le nombre de justificatifs de la fiche de frais du visiteur $unIdVisiteur pour
-</span></span><span id="414" class="l"><a class="l" href="#414">414: </a><span class="php-comment"> * le mois $unMois Ã  la nouvelle valeur $nbJustificatifs
+</span></span><span id="413" class="l"><a class="l" href="#413">413: </a><span class="php-comment"> * Met à  jour le nombre de justificatifs de la fiche de frais du visiteur $unIdVisiteur pour
+</span></span><span id="414" class="l"><a class="l" href="#414">414: </a><span class="php-comment"> * le mois $unMois à  la nouvelle valeur $nbJustificatifs
 </span></span><span id="415" class="l"><a class="l" href="#415">415: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
 </span></span><span id="416" class="l"><a class="l" href="#416">416: </a><span class="php-comment"> * @param string $unIdVisiteur 
 </span></span><span id="417" class="l"><a class="l" href="#417">417: </a><span class="php-comment"> * @param string $unMois mois sous la forme aaaamm
@@ -549,7 +549,7 @@
 </span></span><span id="428" class="l"><a class="l" href="#428">428: </a><span class="php-comment"> * Reporte d'un mois une ligne de frais hors forfait
 </span></span><span id="429" class="l"><a class="l" href="#429">429: </a><span class="php-comment"> * 
 </span></span><span id="430" class="l"><a class="l" href="#430">430: </a><span class="php-comment"> * 
-</span></span><span id="431" class="l"><a class="l" href="#431">431: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
+</span></span><span id="431" class="l"><a class="l" href="#431">431: </a><span class="php-comment"> * @param ressource $idCnx identifiant de connexion
 </span></span><span id="432" class="l"><a class="l" href="#432">432: </a><span class="php-comment"> * @param int $unIdLigneHF identifiant de ligne hors forfait
 </span></span><span id="433" class="l"><a class="l" href="#433">433: </a><span class="php-comment"> * @return void
 </span></span><span id="434" class="l"><a class="l" href="#434">434: </a><span class="php-comment"> */</span>
@@ -558,10 +558,10 @@
 </span><span id="437" class="l"><a class="l" href="#437">437: </a>}
 </span><span id="438" class="l"><a class="l" href="#438">438: </a>
 </span><span id="439" class="l"><a class="l" href="#439">439: </a><span class="php-comment">/**
-</span></span><span id="440" class="l"><a class="l" href="#440">440: </a><span class="php-comment"> * Cloture les fiches de frais antÃ©rieur au mois $unMois
+</span></span><span id="440" class="l"><a class="l" href="#440">440: </a><span class="php-comment"> * Cloture les fiches de frais antérieur au mois $unMois
 </span></span><span id="441" class="l"><a class="l" href="#441">441: </a><span class="php-comment"> *
-</span></span><span id="442" class="l"><a class="l" href="#442">442: </a><span class="php-comment"> * Cloture les fiches de frais antÃ©rieur au mois $unMois
-</span></span><span id="443" class="l"><a class="l" href="#443">443: </a><span class="php-comment"> * et au besoin, crÃ©er une nouvelle de fiche de frais pour le mois courant
+</span></span><span id="442" class="l"><a class="l" href="#442">442: </a><span class="php-comment"> * Cloture les fiches de frais antérieur au mois $unMois
+</span></span><span id="443" class="l"><a class="l" href="#443">443: </a><span class="php-comment"> * et au besoin, créer une nouvelle de fiche de frais pour le mois courant
 </span></span><span id="444" class="l"><a class="l" href="#444">444: </a><span class="php-comment"> * @param resource $idCnx identifiant de connexion
 </span></span><span id="445" class="l"><a class="l" href="#445">445: </a><span class="php-comment">  * @param string $unMois mois sous la forme aaaamm
 </span></span><span id="446" class="l"><a class="l" href="#446">446: </a><span class="php-comment">  * @return void 
@@ -571,9 +571,9 @@
 </span><span id="450" class="l"><a class="l" href="#450">450: </a>    <span class="php-var">$idJeuFichesFrais</span> = <span class="php-keyword2">mysql_query</span>(<span class="php-var">$req</span>, <span class="php-var">$idCnx</span>);
 </span><span id="451" class="l"><a class="l" href="#451">451: </a>    <span class="php-keyword1">while</span> (<span class="php-var">$lgFicheFrais</span> = <span class="php-keyword2">mysql_fetch_array</span>(<span class="php-var">$idJeuFichesFrais</span>)) {
 </span><span id="452" class="l"><a class="l" href="#452">452: </a>        modifierEtatFicheFrais(<span class="php-var">$idCnx</span>, <span class="php-var">$lgFicheFrais</span>[<span class="php-quote">'mois'</span>], <span class="php-var">$lgFicheFrais</span>[<span class="php-quote">'idVisiteur'</span>], <span class="php-quote">'CL'</span>);
-</span><span id="453" class="l"><a class="l" href="#453">453: </a>        <span class="php-comment">// VÃ©rification de l'existence de la fiche de frais pour le mois courant</span>
+</span><span id="453" class="l"><a class="l" href="#453">453: </a>        <span class="php-comment">// Vérification de l'existence de la fiche de frais pour le mois courant</span>
 </span><span id="454" class="l"><a class="l" href="#454">454: </a>        <span class="php-var">$existeFicheFrais</span> = existeFicheFrais(<span class="php-var">$idCnx</span>, <span class="php-var">$unMois</span>, <span class="php-var">$lgFicheFrais</span>[<span class="php-quote">'idVisiteur'</span>]);
-</span><span id="455" class="l"><a class="l" href="#455">455: </a>        <span class="php-comment">// si elle n'existe pas, on la crÃ©e avec les Ã©lÃ©ments de frais forfaitisÃ©s Ã  0</span>
+</span><span id="455" class="l"><a class="l" href="#455">455: </a>        <span class="php-comment">// si elle n'existe pas, on la crée avec les éléments de frais forfaitisés à  0</span>
 </span><span id="456" class="l"><a class="l" href="#456">456: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$existeFicheFrais</span>) {
 </span><span id="457" class="l"><a class="l" href="#457">457: </a>            ajouterFicheFrais(<span class="php-var">$idCnx</span>, <span class="php-var">$unMois</span>, <span class="php-var">$lgFicheFrais</span>[<span class="php-quote">'idVisiteur'</span>]);
 </span><span id="458" class="l"><a class="l" href="#458">458: </a>        }

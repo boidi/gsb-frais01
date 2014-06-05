@@ -926,7 +926,7 @@
 </span><span id="828" class="l"><a class="l" href="#828"> 828: </a>        <span class="php-keyword1">if</span>(<span class="php-var">$l</span>&gt;<span class="php-var">$wmax</span>)
 </span><span id="829" class="l"><a class="l" href="#829"> 829: </a>        {
 </span><span id="830" class="l"><a class="l" href="#830"> 830: </a>            <span class="php-comment">// Automatic line break</span>
-</span><span id="831" class="l"><a class="l" href="#831"> 831: </a>            <span class="php-keyword1">if</span>(<span class="php-var">$sep</span>==-<span class="php-num">1</span>)
+</span><span id="831" class="l"><a class="l" href="#831"> 831: </a>            <span class="php-keyword1">if</span>(<span class="php-var">$sep</span> == -<span class="php-num">1</span>)
 </span><span id="832" class="l"><a class="l" href="#832"> 832: </a>            {
 </span><span id="833" class="l"><a class="l" href="#833"> 833: </a>                <span class="php-keyword1">if</span>(<span class="php-var">$this</span>-&gt;x&gt;<span class="php-var">$this</span>-&gt;lMargin)
 </span><span id="834" class="l"><a class="l" href="#834"> 834: </a>                {
@@ -1120,11 +1120,11 @@
 </span><span id="1022" class="l"><a class="l" href="#1022">1022: </a>            <span class="php-keyword1">break</span>;
 </span><span id="1023" class="l"><a class="l" href="#1023">1023: </a>        <span class="php-keyword1">case</span> <span class="php-quote">'F'</span>:
 </span><span id="1024" class="l"><a class="l" href="#1024">1024: </a>            <span class="php-comment">// Save to local file</span>
-</span><span id="1025" class="l"><a class="l" href="#1025">1025: </a>            <span class="php-var">$f</span> = <span class="php-keyword2">fopen</span>(<span class="php-var">$name</span>,<span class="php-quote">'wb'</span>);
-</span><span id="1026" class="l"><a class="l" href="#1026">1026: </a>            <span class="php-keyword1">if</span>(!<span class="php-var">$f</span>)
+</span><span id="1025" class="l"><a class="l" href="#1025">1025: </a>            <span class="php-var">$fichier</span> = <span class="php-keyword2">fopen</span>(<span class="php-var">$name</span>,<span class="php-quote">'wb'</span>);
+</span><span id="1026" class="l"><a class="l" href="#1026">1026: </a>            <span class="php-keyword1">if</span>(!<span class="php-var">$fichier</span>)
 </span><span id="1027" class="l"><a class="l" href="#1027">1027: </a>                <span class="php-var">$this</span>-&gt;Error(<span class="php-quote">'Unable to create output file: '</span>.<span class="php-var">$name</span>);
-</span><span id="1028" class="l"><a class="l" href="#1028">1028: </a>            <span class="php-keyword2">fwrite</span>(<span class="php-var">$f</span>,<span class="php-var">$this</span>-&gt;buffer,<span class="php-keyword2">strlen</span>(<span class="php-var">$this</span>-&gt;buffer));
-</span><span id="1029" class="l"><a class="l" href="#1029">1029: </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$f</span>);
+</span><span id="1028" class="l"><a class="l" href="#1028">1028: </a>            <span class="php-keyword2">fwrite</span>(<span class="php-var">$fichier</span>,<span class="php-var">$this</span>-&gt;buffer,<span class="php-keyword2">strlen</span>(<span class="php-var">$this</span>-&gt;buffer));
+</span><span id="1029" class="l"><a class="l" href="#1029">1029: </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$fichier</span>);
 </span><span id="1030" class="l"><a class="l" href="#1030">1030: </a>            <span class="php-keyword1">break</span>;
 </span><span id="1031" class="l"><a class="l" href="#1031">1031: </a>        <span class="php-keyword1">case</span> <span class="php-quote">'S'</span>:
 </span><span id="1032" class="l"><a class="l" href="#1032">1032: </a>            <span class="php-comment">// Return as a string</span>
