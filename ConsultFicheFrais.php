@@ -98,10 +98,10 @@
             $idJeuEltsFraisForfait = mysql_query($req, $idConnexion);
             echo mysql_error($idConnexion);
             $lgEltForfait = mysql_fetch_assoc($idJeuEltsFraisForfait);
-            // parcours des frais forfaitisÃ©s du visiteur connectÃ©
-            // le stockage intermÃ©diaire dans un tableau est nÃ©cessaire
-            // car chacune des lignes du jeu d'enregistrements doit Ãªtre doit Ãªtre
-            // affichÃ©e au sein d'une colonne du tableau HTML
+            // parcours des frais forfaitisés du visiteur connecté
+            // le stockage intermédiaire dans un tableau est nécessaire
+            // car chacune des lignes du jeu d'enregistrements doit être 
+            // affichée au sein d'une colonne du tableau HTML
             $tabEltsFraisForfait = array();
             while ( is_array($lgEltForfait) ) {
                 $tabEltsFraisForfait[$lgEltForfait["libelle"]] = $lgEltForfait["quantite"];

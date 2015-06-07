@@ -60,8 +60,9 @@
                     <a href="cValideFicheFrais.php" title="Validation des fiches de frais du mois pr&eacutec&eacutedent">Validation des fiches</a>
                 </li>
                 <li class="smenu">
-                    <a href="MisePaiementFicheFrais.php" tilte="Mise en paiement des fiches frais">Suivre le Paiment des fiches frais du mois pr&eacutec&eacutedent</a>
+                    <a href="MisePaiementFicheFrais.php" tilte="Mise en paiement des fiches frais">mois pr&eacutec&eacutedent</a>
                 </li>
+                <a href="consulterfichefrais.php" tilte="voir les statiques">voir les statistiques des fiches frais</a>
                 <?php 
                 }
             ?>
